@@ -15,7 +15,7 @@ use App\Http\Controllers\pegawaiController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('login');
 });
 
 Auth::routes();
