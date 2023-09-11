@@ -52,6 +52,12 @@
                                     </h2>
                                     <p class="text-white-50 mb-5">
                                         Silahkan login untuk melanjutkan!
+                                        @error('email')
+                                            <span class="text-danger">{{$message}}</span>
+                                        @enderror
+                                        @error('password')
+                                            <span class="text-danger">{{$message}}</span>
+                                        @enderror
                                     </p>
 
                                     <form action="{{ route('login') }}" method="post">
@@ -64,6 +70,7 @@
                                                 type="email"
                                                 id="typeEmailX"
                                                 class="form-control form-control-lg"
+                                                name="email"
                                             />
                                             <label
                                                 class="form-label"
@@ -79,6 +86,7 @@
                                                 type="password"
                                                 id="typePasswordX"
                                                 class="form-control form-control-lg"
+                                                name="password"
                                             />
                                             <label
                                                 class="form-label"
