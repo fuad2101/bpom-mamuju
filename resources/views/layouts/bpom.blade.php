@@ -250,8 +250,8 @@
         </div>
 
         <!-- Sidebar Message -->
-        <div class="sidebar-card d-none d-lg-flex">
-          <img
+        {{-- <div class="sidebar-card d-none d-lg-flex"> --}}
+          {{-- <img
             class="sidebar-card-illustration mb-2"
             src="/img/undraw_rocket.svg"
             alt="..."
@@ -264,8 +264,8 @@
             class="btn btn-success btn-sm"
             href="https://startbootstrap.com/theme/sb-admin-pro"
             >Upgrade to Pro!</a
-          >
-        </div>
+          > --}}
+        {{-- </div> --}}
       </ul>
       <!-- End of Sidebar -->
 
