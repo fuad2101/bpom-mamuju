@@ -51,22 +51,16 @@
                             </tr>
                             </thead>
                             <tbody>
+                                @foreach ($data as $data)
                                 <tr>
-                                    <td scope="row">1</td>
-                                    <td>Muhammad Fuad</td>
-                                    <td>-</td>
-                                    <td>PPNPN</td>
-                                    <td>-</td>
-                                    <td>Infokom</td>
+                                    <td>{{$loop->iteration}}</td>
+                                    <td>{{$data->nama}}</td>
+                                    <td>{{$data->nip}}</td>
+                                    <td>{{$data->jabatan}}</td>
+                                    <td>{{$data->pangkat}}/{{$data->golongan}}</td>
+                                    <td>{{$data->substansi}}</td>
                                 </tr>
-                                <tr>
-                                    <td scope="row">2</td>
-                                    <td>Sri Rahmawati</td>
-                                    <td>192897674665788</td>
-                                    <td>PFM Ahli Madya</td>
-                                    <td>VII</td>
-                                    <td>Infokom</td>
-                                </tr>
+                            @endforeach
                             </tbody>
                     </table>
                 </div>
