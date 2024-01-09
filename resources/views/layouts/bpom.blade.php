@@ -126,7 +126,7 @@
         <!-- Nav Item - Kearsipan -->
         <li class="nav-item">
           <a
-            class="nav-link collapsed disabled"
+            class="nav-link collapsed"
             href="#"
             data-toggle="collapse"
             data-target="#collapseUtilities"
@@ -143,13 +143,9 @@
             data-parent="#accordionSidebar"
           >
             <div class="bg-white py-2 collapse-inner rounded">
-              <h6 class="collapse-header">Arsip Infokom</h6>
-              <a class="collapse-item disabled" href="#" >Arsip Pengujian</a>
-              <a class="collapse-item" href="#">Arsip Tata Usaha</a>
-              <a class="collapse-item" href="#"
-                >Arsip Penindakan</a
-              >
-              <a class="collapse-item" href="#">Arsip Pemeriksaan</a>
+              <h6 class="collapse-header">Daftar Arsip </h6>
+              <a class="collapse-item disabled" href="#" >Aktif</a>
+              <a class="collapse-item" href="#">Inaktif</a>
             </div>
           </div>
         </li>
@@ -157,10 +153,10 @@
         <!-- Nav Item - Kearsipan -->
         <li class="nav-item">
           <a
-            class="nav-link collapsed disabled"
+            class="nav-link collapsed "
             href="#"
             data-toggle="collapse"
-            data-target="#collapseUtilities"
+            data-target="#koperasi"
             aria-expanded="true"
             aria-controls="collapseUtilities"
           >
@@ -168,20 +164,11 @@
             <span>KOPERASI</span>
           </a>
           <div
-            id="collapseUtilities"
+            id="koperasi"
             class="collapse"
             aria-labelledby="headingUtilities"
             data-parent="#accordionSidebar"
           >
-            <div class="bg-white py-2 collapse-inner rounded">
-              <h6 class="collapse-header">Arsip Infokom</h6>
-              <a class="collapse-item disabled" href="#" >Arsip Pengujian</a>
-              <a class="collapse-item" href="#">Arsip Tata Usaha</a>
-              <a class="collapse-item" href="#"
-                >Arsip Penindakan</a
-              >
-              <a class="collapse-item" href="#">Arsip Pemeriksaan</a>
-            </div>
           </div>
         </li>
 
@@ -202,7 +189,7 @@
             aria-controls="collapsePages"
           >
             <i class="fas fa-fw fa-folder"></i>
-            <span>Perjadin</span>
+            <span>Daftar Arsip</span>
           </a>
           <div
             id="collapsePages"
