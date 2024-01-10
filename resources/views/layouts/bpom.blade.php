@@ -126,7 +126,7 @@
         <!-- Nav Item - Kearsipan -->
         <li class="nav-item">
           <a
-            class="nav-link collapsed disabled"
+            class="nav-link collapsed"
             href="#"
             data-toggle="collapse"
             data-target="#collapseUtilities"
@@ -143,13 +143,9 @@
             data-parent="#accordionSidebar"
           >
             <div class="bg-white py-2 collapse-inner rounded">
-              <h6 class="collapse-header">Arsip Infokom</h6>
-              <a class="collapse-item disabled" href="#" >Arsip Pengujian</a>
-              <a class="collapse-item" href="#">Arsip Tata Usaha</a>
-              <a class="collapse-item" href="#"
-                >Arsip Penindakan</a
-              >
-              <a class="collapse-item" href="#">Arsip Pemeriksaan</a>
+              <h6 class="collapse-header">Daftar Arsip </h6>
+              <a class="collapse-item disabled" href="#" >Aktif</a>
+              <a class="collapse-item" href="#">Inaktif</a>
             </div>
           </div>
         </li>
@@ -157,10 +153,10 @@
         <!-- Nav Item - Kearsipan -->
         <li class="nav-item">
           <a
-            class="nav-link collapsed disabled"
+            class="nav-link collapsed "
             href="#"
             data-toggle="collapse"
-            data-target="#collapseUtilities"
+            data-target="#koperasi"
             aria-expanded="true"
             aria-controls="collapseUtilities"
           >
@@ -168,20 +164,11 @@
             <span>KOPERASI</span>
           </a>
           <div
-            id="collapseUtilities"
+            id="koperasi"
             class="collapse"
             aria-labelledby="headingUtilities"
             data-parent="#accordionSidebar"
           >
-            <div class="bg-white py-2 collapse-inner rounded">
-              <h6 class="collapse-header">Arsip Infokom</h6>
-              <a class="collapse-item disabled" href="#" >Arsip Pengujian</a>
-              <a class="collapse-item" href="#">Arsip Tata Usaha</a>
-              <a class="collapse-item" href="#"
-                >Arsip Penindakan</a
-              >
-              <a class="collapse-item" href="#">Arsip Pemeriksaan</a>
-            </div>
           </div>
         </li>
 
@@ -202,7 +189,7 @@
             aria-controls="collapsePages"
           >
             <i class="fas fa-fw fa-folder"></i>
-            <span>Pages</span>
+            <span>Daftar Arsip</span>
           </a>
           <div
             id="collapsePages"
@@ -211,16 +198,18 @@
             data-parent="#accordionSidebar"
           >
             <div class="bg-white py-2 collapse-inner rounded">
-              <h6 class="collapse-header">Login Screens:</h6>
-              <a class="collapse-item" href="login.html">Login</a>
-              <a class="collapse-item" href="register.html">Register</a>
-              <a class="collapse-item" href="forgot-password.html"
-                >Forgot Password</a
-              >
+              <h6 class="collapse-header">Kelengkapan Perjadin</h6>
+              <a class="collapse-item" href="#">Matriks</a>
+              <a class="collapse-item" href="#">ST</a>
+              <a class="collapse-item" href="#">Nota/Kwitansi</a>
+              <a class="collapse-item" href="#">RBP/DPR</a>
+              <a class="collapse-item" href="#">SPPD</a>
+              <a class="collapse-item" href="#">SPTJM</a>
+              <a class="collapse-item" href="#">Lapsing</a>
               <div class="collapse-divider"></div>
-              <h6 class="collapse-header">Other Pages:</h6>
+              {{-- <h6 class="collapse-header">Other Pages:</h6>
               <a class="collapse-item" href="404.html">404 Page</a>
-              <a class="collapse-item" href="blank.html">Blank Page</a>
+              <a class="collapse-item" href="blank.html">Blank Page</a> --}}
             </div>
           </div>
         </li>
@@ -250,8 +239,8 @@
         </div>
 
         <!-- Sidebar Message -->
-        <div class="sidebar-card d-none d-lg-flex">
-          <img
+        {{-- <div class="sidebar-card d-none d-lg-flex"> --}}
+          {{-- <img
             class="sidebar-card-illustration mb-2"
             src="/img/undraw_rocket.svg"
             alt="..."
@@ -264,8 +253,8 @@
             class="btn btn-success btn-sm"
             href="https://startbootstrap.com/theme/sb-admin-pro"
             >Upgrade to Pro!</a
-          >
-        </div>
+          > --}}
+        {{-- </div> --}}
       </ul>
       <!-- End of Sidebar -->
 

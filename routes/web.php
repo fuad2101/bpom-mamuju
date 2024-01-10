@@ -20,6 +20,10 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::get('/sign-up',function(){
+    return view('auth/register');
+});
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/surat',[App\Http\Controllers\HomeController::class,'surat']);
 Route::get('/nodin',[App\Http\Controllers\HomeController::class,'nodin']);
