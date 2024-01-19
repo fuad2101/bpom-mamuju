@@ -1,7 +1,10 @@
 @extends('layouts.bpom')
-
+@section('header')
+@laravelViewsStyles
+@endsection
 @section('content')
     <!-- Begin Page Content -->
+    {{-- @livewire() --}}
           <div class="container-fluid">
             <!-- Page Heading -->
             <div
@@ -15,7 +18,8 @@
               >
             </div>
 
-                <form action="" method="get" class="">
+                <form action="/phpword" method="post" class="">
+                    @csrf
                 <div class="col-md-4 mb-3">
                     <label for="no_surat" class="form-label">Nomor Surat</label>
                     <input type="text" name="" id="no_surat" class="form-control">
@@ -84,11 +88,39 @@
                         <input class="form-check-input" type="checkbox" name="opsi_cetak" id="sptjm"disabled><label class="form-check-label" for="sptjm" >SPTJM</label>
                     </div>
                 </div>
-                    <button class="btn btn-primary mb-5">Cetak Surat</button>
+                    <button type="" class="btn btn-primary mb-5">Cetak Surat</button>
                 </form>
 
 
           </div>
+@endsection
+
+@section('footer')
+@laravelViewsScripts()
+<script>
+    $(document).ready(function () {
+
+    const nama=[];
+    $('input[id="nama"]').tagify({
+        placeholder:'Masukkan Nama',
+        callback:{
+             function () {
+                alert('Nama Masuk');
+              }
+        }
+    });
+
+    // $('input[id="nama"]').on('keypress', function (e) {
+    //     let val = $('input[id="nama"]').val();
+    //     if (e.which === 13) {
+    //         nama.push(val);
+    //         e.preventDefault();
+
+    //         alert(nama);
+    //     }
+    // });
+    });
+</script>
 
 @endsection
 

@@ -9,7 +9,7 @@
     />
     <meta name="description" content="" />
     <meta name="author" content="" />
-
+    @yield('header')
     <title>SISaTu - BPOM Mamuju</title>
 
     <!-- Custom fonts for this template-->
@@ -25,6 +25,7 @@
 
     <!-- Custom styles for this template-->
     <link href="/css/sb-admin-2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/tagify.css">
   </head>
 
     <body id="page-top">
@@ -198,13 +199,7 @@
             data-parent="#accordionSidebar"
           >
             <div class="bg-white py-2 collapse-inner rounded">
-              <h6 class="collapse-header">Kelengkapan Perjadin</h6>
-              <a class="collapse-item" href="#">Matriks</a>
-              <a class="collapse-item" href="#">ST</a>
-              <a class="collapse-item" href="#">Nota/Kwitansi</a>
-              <a class="collapse-item" href="#">RBP/DPR</a>
-              <a class="collapse-item" href="#">SPPD</a>
-              <a class="collapse-item" href="#">SPTJM</a>
+              <h6 class="collapse-header">Arsip Aktif</h6>
               <a class="collapse-item" href="#">Lapsing</a>
               <div class="collapse-divider"></div>
               {{-- <h6 class="collapse-header">Other Pages:</h6>
@@ -215,20 +210,20 @@
         </li>
 
         <!-- Nav Item - Charts -->
-        <li class="nav-item">
+        {{-- <li class="nav-item">
           <a class="nav-link" href="charts.html">
             <i class="fas fa-fw fa-chart-area"></i>
             <span>Charts</span></a
           >
-        </li>
+        </li> --}}
 
         <!-- Nav Item - Tables -->
-        <li class="nav-item">
+        {{-- <li class="nav-item">
           <a class="nav-link" href="tables.html">
             <i class="fas fa-fw fa-table"></i>
             <span>Tables</span></a
           >
-        </li>
+        </li> --}}
 
         <!-- Divider -->
         <hr class="sidebar-divider d-none d-md-block" />
@@ -605,6 +600,7 @@
     </div>
 
     <!-- Bootstrap core JavaScript-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="/jquery/jquery.min.js"></script>
     <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
 
@@ -620,5 +616,7 @@
     <!-- Page level custom scripts -->
     <script src="/js/demo/chart-area-demo.js"></script>
     <script src="/js/demo/chart-pie-demo.js"></script>
+    <script src="/js/jQuery.tagify.min.js"></script>
+    @yield('footer')
   </body>
 </html>

@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\pegawaiController;
+use App\Http\Controllers\SuratController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,3 +34,5 @@ Route::get('/nodin',[App\Http\Controllers\HomeController::class,'nodin']);
 Route::get('/pegawai',[pegawaiController::class,'index'])->name('pegawai.index');
 Route::get('/pegawai/create',[pegawaiController::class,'create'])->name('pegawai.create');
 Route::post('/pegawai/create',[pegawaiController::class,'store'])->name('pegawai.store');
+
+Route::post('/phpword',[SuratController::class,'create']);

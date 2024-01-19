@@ -32,7 +32,7 @@ class HomeController extends Controller
         return view('bpom.pegawai');
     }
     public function surat(){
-        return view('bpom.surat');
+        return view('bpom.persuratan.surat');
     }
     public function nodin(){
         return view('bpom.nodin');
