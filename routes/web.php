@@ -4,6 +4,7 @@ use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\pegawaiController;
 use App\Http\Controllers\SuratController;
+use App\Http\Controllers\kearsipanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,3 +37,5 @@ Route::get('/pegawai/create',[pegawaiController::class,'create'])->name('pegawai
 Route::post('/pegawai/create',[pegawaiController::class,'store'])->name('pegawai.store');
 
 Route::post('/phpword',[SuratController::class,'create']);
+
+Route::get('/vital',[kearsipanController::class,'index']);

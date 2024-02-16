@@ -147,6 +147,7 @@
               <h6 class="collapse-header">Daftar Arsip </h6>
               <a class="collapse-item disabled" href="#" >Aktif</a>
               <a class="collapse-item" href="#">Inaktif</a>
+              <a class="collapse-item" href="/vital">Daftar Arsip Vital</a>
             </div>
           </div>
         </li>
@@ -190,7 +191,7 @@
             aria-controls="collapsePages"
           >
             <i class="fas fa-fw fa-folder"></i>
-            <span>Daftar Arsip</span>
+            <span>Others</span>
           </a>
           <div
             id="collapsePages"
@@ -200,7 +201,7 @@
           >
             <div class="bg-white py-2 collapse-inner rounded">
               <h6 class="collapse-header">Arsip Aktif</h6>
-              <a class="collapse-item" href="#">Lapsing</a>
+              <a class="collapse-item" href="/vital">Daftar Arsip vital</a>
               <div class="collapse-divider"></div>
               {{-- <h6 class="collapse-header">Other Pages:</h6>
               <a class="collapse-item" href="404.html">404 Page</a>
