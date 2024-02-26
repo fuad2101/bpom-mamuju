@@ -3,6 +3,7 @@
 @section('content')
     <!-- Begin Page Content -->
           <div class="container-fluid">
+
             <!-- Page Heading -->
             <div
               class="d-sm-flex align-items-center justify-content-between mb-4"
@@ -37,8 +38,9 @@
 
             <!-- Content Row -->
             <div class="row">
+                {{$dataTable->table()}}
 
-                <div class="col">
+                {{-- <div class="col">
                     <table class="table table-striped table-inverse table-bordered">
                         <thead class="thead-inverse">
                             <tr>
@@ -63,7 +65,7 @@
                             @endforeach
                             </tbody>
                     </table>
-                </div>
+                </div> --}}
 
 
               <!-- Earnings (Monthly) Card Example -->
@@ -497,5 +499,9 @@
         </div>
         <!-- End of Main Content -->
 @endsection
+
+@push('scripts')
+     {{$dataTable->scripts()}}
+@endpush
 
 

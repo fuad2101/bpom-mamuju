@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Pegawai;
+use App\DataTables\PegawaisDataTable;
 
 class pegawaiController extends Controller
 {
@@ -12,10 +13,14 @@ class pegawaiController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(PegawaisDataTable $datatable)
     {
-        $data = Pegawai::all();
-        return view('bpom.pegawai.index')->with('data',$data);
+
+
+        return $datatable->render('bpom.pegawai.index');
+        //$data = $datatable->render();
+        //$data = Pegawai::all();
+        //return view('')->with('data',$data);
     }
 
     /**
