@@ -17,7 +17,7 @@
             </div>
 
             <!-- Topbar Search -->
-            <form
+            {{-- <form
               class="d-none d-sm-inline-block form-inline navbar-search mb-4"
             >
               <div class="input-group">
@@ -34,11 +34,12 @@
                   </button>
                 </div>
               </div>
-            </form>
+            </form> --}}
 
             <!-- Content Row -->
+            {{$dataTable->table()}}
             <div class="row">
-                {{$dataTable->table()}}
+
 
                 {{-- <div class="col">
                     <table class="table table-striped table-inverse table-bordered">

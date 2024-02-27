@@ -23,8 +23,7 @@ class PegawaisDataTable extends DataTable
     public function dataTable(QueryBuilder $query): EloquentDataTable
     {
         return (new EloquentDataTable($query))
-            ->addColumn('action', 'pegawais.action')
-            ->addColumn('nama', 'pegawais.nama')
+            //->addColumn('action', 'pegawais.action')
             ->setRowId('id');
     }
 
@@ -51,7 +50,7 @@ class PegawaisDataTable extends DataTable
                     ->columns($this->getColumns())
                     ->minifiedAjax()
                     //->dom('Bfrtip')
-                    ->orderBy(1)
+                    ->orderBy(0,'Asc')
                     ->selectStyleSingle()
                     ->buttons([
                         Button::make('excel'),
@@ -59,8 +58,8 @@ class PegawaisDataTable extends DataTable
                         Button::make('pdf'),
                         Button::make('print'),
                         Button::make('reset'),
-                        Button::make('reload')
-                    ]);
+                        Button::make('reload')])
+                    ;
     }
 
     /**
@@ -71,11 +70,11 @@ class PegawaisDataTable extends DataTable
     public function getColumns(): array
     {
         return [
-            Column::computed('action')
-                  ->exportable(false)
-                  ->printable(false)
-                  ->width(60)
-                  ->addClass('text-center'),
+            //Column::computed('action')
+             //     ->exportable(true)
+               //   ->printable(true)
+                 // ->width(60)
+                 // ->addClass('text-center'),
             Column::make('id'),
             Column::make('nama'),
             Column::make('nip'),
@@ -83,8 +82,6 @@ class PegawaisDataTable extends DataTable
             Column::make('golongan'),
             Column::make('jabatan'),
             Column::make('substansi'),
-            Column::make('created_at'),
-            Column::make('updated_at'),
         ];
     }
 
