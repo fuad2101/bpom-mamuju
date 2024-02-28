@@ -29,7 +29,20 @@
                 </div>
                 <div class="col-md-4 mb-3">
                     <label for="pangkat" class="form-label">Pangkat/Gol</label>
-                    <input type="text" name="panggol" id="pangkat" class="form-control">
+                    <input type="text" name="pangkat" id="pangkat" class="form-control">
+                </div>
+                <div>
+                    <label for="golongan">Golongan</label>
+                    <select name="golongan" id="golongan">
+                        <option value="III/a">III/a</option>
+                        <option value="III/b">III/b</option>
+                        <option value="III/c">III/c</option>
+                        <option value="III/d">III/d</option>
+                        <option value="IV/a">IV/a</option>
+                        <option value="IV/b">IV/b</option>
+                        <option value="IV/c">IV/c</option>
+                        <option value="IV/d">IV/d</option>
+                    </select>
                 </div>
                 <div class="col-md-4 mb-3">
                     <label for="substansi" class="form-label">Substansi</label>

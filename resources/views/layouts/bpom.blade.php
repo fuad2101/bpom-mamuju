@@ -120,11 +120,8 @@
           >
             <div class="bg-white py-2 collapse-inner rounded">
               <h6 class="collapse-header">Buat Surat</h6>
-              <a class="collapse-item" href="{{url('/surat')}}">Surat Tugas</a>
-              <a class="collapse-item" href=" {{url('/nodin')}} ">Nota Dinas</a>
-              <a class="collapse-item" href="#"
-                >Undangan</a
-              >
+              <a class="collapse-item" href="{{url('/surat/st')}}">Surat Tugas</a>
+              <a class="collapse-item" href=" {{url('/surat/nodin')}} ">Nota Dinas</a>
             </div>
           </div>
         </li>
@@ -157,8 +154,8 @@
           </div>
         </li>
 
-        <!-- Nav Item - Kearsipan -->
-        <li class="nav-item">
+        <!-- Nav Item - Koperasi -->
+        {{-- <li class="nav-item">
           <a
             class="nav-link collapsed "
             href="#"
@@ -177,7 +174,7 @@
             data-parent="#accordionSidebar"
           >
           </div>
-        </li>
+        </li> --}}
 
         <!-- Divider -->
         <hr class="sidebar-divider" />
@@ -196,7 +193,7 @@
             aria-controls="collapsePages"
           >
             <i class="fas fa-fw fa-folder"></i>
-            <span>Others</span>
+            <span>Lainnya</span>
           </a>
           <div
             id="collapsePages"
@@ -205,8 +202,8 @@
             data-parent="#accordionSidebar"
           >
             <div class="bg-white py-2 collapse-inner rounded">
-              <h6 class="collapse-header">Arsip Aktif</h6>
-              <a class="collapse-item" href="/vital">Daftar Arsip vital</a>
+              <h6 class="collapse-header">DUMMY</h6>
+              <a class="collapse-item" href="#">Others</a>
               <div class="collapse-divider"></div>
               {{-- <h6 class="collapse-header">Other Pages:</h6>
               <a class="collapse-item" href="404.html">404 Page</a>

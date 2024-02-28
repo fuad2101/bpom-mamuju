@@ -18,26 +18,38 @@ use App\Http\Controllers\vitalController;
 |
 */
 
+Auth::routes();
+
 Route::get('/', function () {
     return view('login');
 });
-
-Auth::routes();
-
 Route::get('/sign-up',function(){
     return view('auth/register');
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/surat',[App\Http\Controllers\HomeController::class,'surat']);
-Route::get('/nodin',[App\Http\Controllers\HomeController::class,'nodin']);
+Route::prefix('surat')->group(function(){
+    Route::get('/st',function(){
+        return view('bpom.persuratan.create.st');
+    });
+    Route::get('/nodin',function(){
+        return view('bpom.persuratan.create.nodin');
+    });
+});
 
 
 Route::get('/pegawai',[pegawaiController::class,'index'])->name('pegawai.index');
 Route::get('/pegawai/create',[pegawaiController::class,'create'])->name('pegawai.create');
 Route::post('/pegawai/create',[pegawaiController::class,'store'])->name('pegawai.store');
 
-Route::post('/phpword',[SuratController::class,'create']);
+//Route::post('/phpword',[SuratController::class,'create']);
 
 Route::get('/vital',[vitalController::class,'index']);
 Route::get('/vital/create',[vitalController::class,'create']);
+
+Route::controller(SuratController::class)->group(function(){
+    Route::get('/exp/pdf','pdf');
+    Route::post('/exp/docx','docx');
+    Route::post('/exp/xls','xls');
+});
+

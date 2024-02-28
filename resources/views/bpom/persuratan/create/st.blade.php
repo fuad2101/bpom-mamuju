@@ -18,7 +18,7 @@
               >
             </div>
 
-                <form action="/phpword" method="post" class="">
+                <form action="/exp/pdf" method="post" class="">
                     @csrf
                 <div class="col-md-4 mb-3">
                     <label for="no_surat" class="form-label">Nomor Surat</label>
@@ -110,15 +110,6 @@
         }
     });
 
-    // $('input[id="nama"]').on('keypress', function (e) {
-    //     let val = $('input[id="nama"]').val();
-    //     if (e.which === 13) {
-    //         nama.push(val);
-    //         e.preventDefault();
-
-    //         alert(nama);
-    //     }
-    // });
     });
 </script>
 

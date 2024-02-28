@@ -41,7 +41,16 @@ class pegawaiController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request);
+        Pegawai::create([
+            'nama'=>$request->nama,
+            'nip'=>$request->nip,
+            'jabatan'=>$request->jabatan,
+            'pangkat'=>$request->pangkat,
+            'golongan'=>$request->golongan,
+            'substansi'=>$request->substansi,
+            ]);
+
+        return redirect('/pegawai');
 
     }
 
