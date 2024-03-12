@@ -48,7 +48,7 @@ Route::get('/vital',[vitalController::class,'index']);
 Route::get('/vital/create',[vitalController::class,'create']);
 
 Route::controller(SuratController::class)->group(function(){
-    Route::get('/exp/pdf','pdf');
+    Route::post('/exp/pdf','pdf');
     Route::post('/exp/docx','docx');
     Route::post('/exp/xls','xls');
 });

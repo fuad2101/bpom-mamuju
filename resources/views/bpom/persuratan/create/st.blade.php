@@ -11,15 +11,11 @@
               class="d-sm-flex align-items-center justify-content-between mb-4"
             >
               <h1 class="h3 mb-0 text-gray-800">Buat Surat Tugas</h1>
-              <a
-                href="#"
-                class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"
-                ><i class="fas fa-download fa-sm text-white-50"></i> Tambah Pegawai</a
-              >
             </div>
 
                 <form action="/exp/pdf" method="post" class="">
                     @csrf
+                <input type="hidden" name="exportType" value="st">
                 <div class="col-md-4 mb-3">
                     <label for="no_surat" class="form-label">Nomor Surat</label>
                     <input type="text" name="" id="no_surat" class="form-control">
@@ -37,7 +33,7 @@
                 </div>
                 <div class="col-md-4 mb-3">
                     <label for="nama" class="form-label">Nama Petugas</label>
-                    <input type="text" name="" id="nama" class="form-control">
+                    <input type="text" name="nama" id="nama" class="form-control">
 
                 </div>
                 <div class="col-md-4 mb-3">
@@ -96,7 +92,6 @@
 @endsection
 
 @section('footer')
-@laravelViewsScripts()
 <script>
     $(document).ready(function () {
 
