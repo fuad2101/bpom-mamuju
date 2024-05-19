@@ -31,7 +31,7 @@
                 );
             }
         </style>
-        <title>Document</title>
+        <title>SISatu | BPOM Mamuju</title>
     </head>
     <body>
         <section class=" gradient-custom">

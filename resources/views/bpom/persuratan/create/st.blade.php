@@ -78,7 +78,7 @@
 
                 <div class="col-md-4 my-4 text-center">
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" name="opsi_cetak" id="sppd"><label class="form-check-label" for="sppd">Cetak SPPD</label>
+                        <input class="form-check-input" type="checkbox" name="opsi_cetak" id="sppd"><label class="form-check-label" for="sppd">SPPD</label>
                     </div>
                     <div class="form-check form-check-inline">
                         <input class="form-check-input" type="checkbox" name="opsi_cetak" id="sptjm"disabled><label class="form-check-label" for="sptjm" >SPTJM</label>

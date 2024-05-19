@@ -1,0 +1,14 @@
+@font-face {
+    font-family: "Bookman Old Style";
+    src: url({{storage_path("fonts\BOokman-Old-Style.ttf")}}) format("truetype");
+}
+body {
+    font-family: "Bookman Old Style";
+}
+#kop,
+#kop-footer {
+    width: 100%;
+}
+footer {
+    page-break-after: avoid;
+}
