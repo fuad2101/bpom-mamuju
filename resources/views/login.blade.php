@@ -130,11 +130,11 @@
 
                                 <div>
                                     <p class="mb-0">
-                                        Don't have an account?
+                                        Belum punya akun?
                                         <a
                                             href="/sign-up"
                                             class="text-white-50 fw-bold"
-                                            >Sign Up</a
+                                            >Daftar di sini</a
                                         >
                                     </p>
                                 </div>

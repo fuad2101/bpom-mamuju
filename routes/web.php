@@ -21,13 +21,18 @@ use App\Http\Controllers\vitalController;
 Auth::routes();
 
 Route::get('/', function () {
-    return view('login');
+    return view('auth.login');
 });
 Route::get('/sign-up',function(){
     return view('auth/register');
 });
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware(['auth', 'verified'])->name('home');
 Route::prefix('surat')->group(function(){
     Route::get('/st',function(){
         return view('bpom.persuratan.create.st');
