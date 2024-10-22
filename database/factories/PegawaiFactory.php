@@ -17,12 +17,12 @@ class PegawaiFactory extends Factory
     public function definition()
     {
         return [
-                'nama' =>'Suliyanto SH.MH',
-                'nip'=>'192168123456789',
-                'pangkat'=>'Test',
-                'golongan'=>'test',
-                'jabatan'=>'test',
-                'substansi'=>'test',
+                'nama' =>$this->faker->name(),
+                'nip'=>$this->faker->unique()->safeEmail(),
+                'pangkat'=>$this->faker->randomElement(['A','B','C']),
+                'golongan'=>$this->faker->randomElement(['VII','VI','III']),
+                'jabatan'=>'Pengawas Farmasi dan Makanan',
+                'substansi'=>$this->faker->randomElement(['Infokom','Pengujian','Tata Usaha','Penindakan','Pemeriksaan']),
         ];
     }
 }

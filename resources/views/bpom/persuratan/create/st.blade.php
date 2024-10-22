@@ -76,14 +76,14 @@
 
                 </div>
 
-                <div class="col-md-4 my-4 text-center">
+                {{-- <div class="col-md-4 my-4 text-center">
                     <div class="form-check form-check-inline">
                         <input class="form-check-input" type="checkbox" name="opsi_cetak" id="sppd"><label class="form-check-label" for="sppd">SPPD</label>
                     </div>
                     <div class="form-check form-check-inline">
                         <input class="form-check-input" type="checkbox" name="opsi_cetak" id="sptjm"disabled><label class="form-check-label" for="sptjm" >SPTJM</label>
                     </div>
-                </div>
+                </div> --}}
                     <button type="" class="btn btn-primary mb-5">Cetak Surat</button>
                 </form>
 

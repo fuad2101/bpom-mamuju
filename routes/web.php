@@ -40,6 +40,9 @@ Route::prefix('surat')->group(function(){
     Route::get('/nodin',function(){
         return view('bpom.persuratan.create.nodin');
     });
+    Route::get('/pjb',function(){
+        return view('bpom.persuratan.pjb');
+    });
 });
 
 
