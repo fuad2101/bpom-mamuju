@@ -17,7 +17,7 @@ class pegawaiController extends Controller
     {
 
 
-        return $datatable->render('bpom.pegawai.index');
+        return $datatable->render('pages.bpom.pegawai.index');
         //$data = $datatable->render();
         //$data = Pegawai::all();
         //return view('')->with('data',$data);

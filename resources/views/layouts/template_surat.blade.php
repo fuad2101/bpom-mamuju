@@ -12,11 +12,8 @@
             }
             #kop,#kop-footer{
                 width: 100%;
+                margin: -20px;
             }
-            /* footer{
-                break-after: avoid;
-            } */
-
         </style>
         <title>@yield('jns-surat')</title>
     </head>

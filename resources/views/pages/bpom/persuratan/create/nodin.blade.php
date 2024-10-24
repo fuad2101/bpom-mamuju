@@ -18,7 +18,19 @@
                     <input type="text" name="nomor" id="no_surat" class="form-control">
                 </div>
                 <div class="col-md-4 mb-3">
+                    <label for="tujuan" class="form-label">Dari</label>
+                    <input type="text" name="nomor" id="tujuan" class="form-control">
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="tujuan" class="form-label">Tujuan</label>
+                    <input type="text" name="nomor" id="tujuan" class="form-control">
+                </div>
+                <div class="col-md-4 mb-3">
                     <label for="hal" class="form-label">Hal</label>
+                    <input type="text" name="hal" id="hal" class="form-control">
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="hal" class="form-label">Lampiran</label>
                     <input type="text" name="hal" id="hal" class="form-control">
                 </div>
 
@@ -29,15 +41,11 @@
                 </div>
 
                 <div class="col-md-4 mb-3">
-                    <label for="tujuan" class="form-label">Tujuan</label>
-                    <select class="form-control" name="tujuan" id="">
-                        <option value="">Kepala Sub Bagian Tata Usaha</option>
-                        <option value="">Kepala Sub Bagian Infokom</option>
-                        <option value="">Kepala Sub Bagian Pengujian</option>
-                        <option value="">Kepala Sub Bagian Penindakan</option>
-                        <option value="">Kepala Sub Bagian Pemeriksaan</option>
+                    <label for="penandatangan" class="form-label">Penandatangan</label>
+                    <select class="form-control" name="penandatangan" id="">
+                        <option value="">Besse Tenri Wawo</option>
+                        <option value="">Suliyanto, SH., MH.</option>
                     </select>
-
                 </div>
 
                 <div class="col-md-4 form-floating">

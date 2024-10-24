@@ -122,6 +122,7 @@
               <h6 class="collapse-header">Buat Surat</h6>
               <a class="collapse-item" href="{{url('/surat/st')}}">Surat Tugas</a>
               <a class="collapse-item" href=" {{url('/surat/nodin')}} ">Nota Dinas</a>
+              <a class="collapse-item" href=" {{url('/surat/nodin')}} ">Penciptaan</a>
             </div>
           </div>
         </li>

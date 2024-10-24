@@ -1,9 +1,51 @@
-@extends('bpom.layouts.surat.template')
+@extends('layouts.template_surat')
 
 @section('jns-surat','Surat Tugas')
 
 @section('content')
-    <div class="container p-5">
+
+    <p style="text-align: center;">SURAT TUGAS</p>
+<div>
+<div style="text-align: center;">NOMOR : PM.01.02.10B.01.24.15</div>
+<div style="text-align: center;">
+<p style="text-align: left;">&nbsp;</p>
+<table style="height: 56px; width: 1033px;" cellpadding="0">
+<tbody>
+<tr style="text-align: center; height: 73px;">
+<td style="width: 111px; text-align: right; vertical-align: top; height: 73px;">Menimbang :&nbsp;</td>
+<td style="width: 906px; text-align: left; vertical-align: top; height: 73px;">
+<ol>
+<li>
+<div>bahwa dalam rangka Pemberdayaan pada Masyarakat Tahun 2024 perlu dilaksanakan kegiatan Komunikasi Informasi dan Edukasi Bersama Tokoh Masyarakat (KIE)</div>
+</li>
+<li>
+<div>bahwa yang namanya tercantum dalam lampiran surat ini telah memenuhi syarat yang diperlukan untuk diserahi tugas dimaksud</div>
+</li>
+</ol>
+</td>
+</tr>
+<tr style="text-align: center; height: 73px;">
+<td style="width: 111px; text-align: right; vertical-align: top; height: 73px;">Dasar:&nbsp;</td>
+<td style="width: 906px; text-align: left; vertical-align: top; height: 73px;">
+<div>
+<ol>
+<li>Undang &amp;ndash; Undang N0. 36 Tahun 2009 tentang Kesehatan</li>
+<li>
+<div>
+<div>Undang - Undang No.18 Tahun 2012 tentang Pangan</div>
+</div>
+</li>
+</ol>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+    {{-- <div class="container">
         <p class="center">SURAT TUGAS</p>
         <p class="center">NOMOR : PM.01.02.10B.01.24.15</p>
         <p><br /></p>
@@ -52,5 +94,5 @@
         </p>
         <p><br /></p>
         <p><br /></p>
-    </div>
+    </div> --}}
 @endsection
