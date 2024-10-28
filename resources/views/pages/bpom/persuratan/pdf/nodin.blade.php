@@ -22,7 +22,7 @@
         </p>
         <p style="text-align: center; margin-bottom: 0px">NOTA DINAS</p>
         <p style="text-align: center; margin-top: 0px">
-            NOMOR: HM.01.00.00.00.000.00
+            NOMOR: {{$data['nomor']}}
         </p>
         <p>&nbsp;</p>
         <table style="height: 37px; width: 1023px">
@@ -55,10 +55,7 @@
                         scope="row"
                     >
                         <span style="text-align: left"
-                            >1. Plt. Kepala Balai POM di Mamuju</span
-                        ><br /><span style="text-align: left"
-                            >2. Pegawai di Lingkungan BPOM di Mamuju</span
-                        >
+                            >{{$data['tujuan']}}</span
                     </td>
                 </tr>
                 <tr>
@@ -89,7 +86,7 @@
                         scope="row"
                     >
                         <span style="text-align: left"
-                            >Kepala Subbag Tata Usaha</span
+                            >{{$data['dari']}}</span
                         >
                     </td>
                 </tr>
@@ -121,8 +118,7 @@
                         scope="row"
                     >
                         <span style="text-align: left"
-                            >Pelaksanaan KIE P4GN Tahun 2024 di Lingkungan Balai
-                            POM di Mamuju</span
+                            >{{$data['hal']}}</span
                         >
                     </td>
                 </tr>
@@ -153,7 +149,7 @@
                         "
                         scope="row"
                     >
-                        <span style="text-align: left">-</span>
+                        <span style="text-align: left">{{$data['lampiran']}}</span>
                     </td>
                 </tr>
                 <tr>
@@ -183,7 +179,7 @@
                         "
                         scope="row"
                     >
-                        <span style="text-align: left">22 Oktober 2024</span>
+                        <span style="text-align: left">{{$data['tanggal']}}</span>
                     </td>
                 </tr>
             </tbody>
@@ -192,29 +188,14 @@
             style="margin: 15px 0px 15px 0px; color: black; outline-width: 5px"
         />
         <div style="text-align: justify; line-height: 1.5">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Fugiatvelit, sed excepturi, deserunt exercitationem nam natus
-            asperioresnobis vel quae quos soluta praesentium magnam pariatur,
-            doloremiusto. Laborum, fugit perferendis.Lorem ipsum dolor, sit amet
-            consectetur adipisicing elit. Fugiat velit, sed excepturi, deserunt
-            exercitationem nam natus asperiores nobis vel quae quos soluta
-            praesentium magnam pariatur, dolorem iusto. Lorem ipsum, dolor sit
-            amet consectetur adipisicing elit. Id ipsa quidem, a, dolorem error
-            illo temporibus autem deserunt non earum quibusdam itaque sint
-            praesentium laudantium totam in. Eos, aspernatur natus.
-            <div>
-                <div>
-                    <p style="padding-left: 60px">Hari:</p>
-                    <p style="padding-left: 60px">Tempat:</p>
-                    <p style="padding-left: 60px">Pukul</p>
-                </div>
-            </div>
-            <div>Demikian Penyampaian ini untuk dilaksanakan.Terimakasih</div>
-            <div>&nbsp;</div>
-            <div>&nbsp;</div>
-            <div>&nbsp;</div>
-            <div>&nbsp;</div>
-            <div style="padding-left: 65%">Besse Tenri Wawo, SE</div>
+            {{$data['isi']}}
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div style="padding-left: 65%">{{$data['penandatangan']}}</div>
         </div>
     </body>
 </html>

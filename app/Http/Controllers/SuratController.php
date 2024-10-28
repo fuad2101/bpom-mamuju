@@ -25,13 +25,12 @@ class SuratController extends Controller
     }
 
     public function pdf(Request $request){
-        $export = $request->exportType;
+        $exportType = $request->exportType;
         $data = $request->all();
-        //return view('bpom.persuratan.pdf.st');
-        if($export == 'nodin'){
+        if($exportType == 'nodin'){
             //dd($data);
             $pdf = Pdf::loadview('pages.bpom.persuratan.pdf.nodin',['data'=>$data]);
-              return $pdf->download('nodin.pdf');
+            return $pdf->stream('nodin.pdf');
             //return view('bpom.persuratan.pdf.nodin',['data'=>$data]);
         }elseif($export == 'st'){
             $pdf = Pdf::loadview('pages.bpom.persuratan.pdf.st');
