@@ -5,12 +5,17 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use PhpOffice\PhpWord\PhpWord as phpword;
 use Barryvdh\DomPDF\Facade\Pdf;
+Use RealRashid\SweetAlert\Facades\Alert;
 //use Illuminate\Support\Facades\Request;
 //use PhpOffice\PhpWord\IOFactory as iofactory ;
 
 
 class SuratController extends Controller
 {
+
+    
+    
+    
     public function create(){
         $phpword = new phpword();
         $section = $phpword->addSection();
@@ -25,18 +30,18 @@ class SuratController extends Controller
     }
 
     public function pdf(Request $request){
-        $exportType = $request->exportType;
+        /* $exportType = $request->exportType;
         $data = $request->all();
         if($exportType == 'nodin'){
             //dd($data);
             $pdf = Pdf::loadview('pages.bpom.persuratan.pdf.nodin',['data'=>$data]);
             return $pdf->stream('nodin.pdf');
             //return view('bpom.persuratan.pdf.nodin',['data'=>$data]);
-        }elseif($export == 'st'){
+        }elseif($exportType == 'st'){
             $pdf = Pdf::loadview('pages.bpom.persuratan.pdf.st');
             return $pdf->download('st.pdf');
             //return view('bpom.persuratan.pdf.st',['data'=>$data]);
-        }
+        } */
     }
     public function docx(){
         return "Docs Generate ";

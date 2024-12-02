@@ -1,3 +1,4 @@
+@include('sweetalert::alert')
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -27,10 +28,10 @@
     <link rel="stylesheet" href="/css/tagify.css">
 
 
+
     <title>SISaTu - BPOM Mamuju</title>
 
     <!-- Custom fonts for this template-->
-
   </head>
 
     <body id="page-top">
@@ -620,6 +621,7 @@
     <script src="https://cdn.datatables.net/2.0.0/js/dataTables.min.js"></script>
     <script src="{{ mix('js/app.js') }}"></script>
     <script src="{{ asset('vendor/datatables/buttons.server-side.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     @stack('scripts')
     @yield('footer')
   </body>

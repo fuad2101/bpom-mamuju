@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use app\Models\User;
+use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class HomeController extends Controller
 {
@@ -26,6 +27,7 @@ class HomeController extends Controller
     {
         // $userModel = User::all();
         // Session::put('user',Auth::)
+        Alert::alert('Title', 'Message', 'Type');
         return view('pages.bpom.index');
     }
     public function pegawai(){
