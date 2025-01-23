@@ -32,6 +32,10 @@
 
                 </div>
                 <div class="col-md-4 mb-3">
+                    <label for="menimbang" class="form-label">Isi Menimbang Poin 1</label>
+                    <input type="text" name="" id="tanggal" class="form-control">
+                </div>
+                <div class="col-md-4 mb-3">
                     <label for="nama" class="form-label">Nama Petugas</label>
                     <input type="text" name="nama" id="nama" class="form-control">
 
