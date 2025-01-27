@@ -7,12 +7,6 @@
   <style>
   /* Font Definitions */
   @font-face
-        {font-family:"Cambria Math";
-        panose-1:2 4 5 3 5 4 6 3 2 4;}
-  @font-face
-        {font-family:Calibri;
-        panose-1:2 15 5 2 2 2 4 3 2 4;}
-  @font-face
         {font-family:"Bookman Old Style";
         panose-1:2 5 6 4 5 5 5 2 2 4;}
   /* Style Definitions */
@@ -68,7 +62,7 @@
     <p class="MsoNormal" align="center" style='margin-top:0in;margin-right:0in; margin-bottom:0in;margin-left:65.1pt;text-align:center'><span style='font-size: 12.0pt;line-height:107%;font-family:"Bookman Old Style",serif'>&nbsp;</span></p>
     <p class="MsoNormal" align="center" style='margin-top:0in;margin-right:38.95pt; margin-bottom:5.8pt;margin-left:100.75pt;text-align:center;text-indent:-.5pt'><span style='font-size:12.0pt;line-height:107%;font-family:"Bookman Old Style",serif'>SURAT TUGAS</span></p>
     <p class="MsoNormal" align="center" style='margin-top:0in;margin-right:38.95pt; margin-bottom:0in;margin-left:100.75pt;text-align:center;text-indent:-.5pt'><span style='font-size:12.0pt;line-height:107%;font-family:"Bookman Old Style",serif'>NOMOR : PM.02.04.10B.09.24.141</span></p>
-    <p class="MsoNormal" align="center" style='margin-top:0in;margin-right:0in; margin-bottom:0in;margin-left:62.65pt;text-align:center'><img width="816" height="322" src="1737703310_st-fasilitasi-desa-pangan-tandasura-12-13-sept-2024_files/image001.png" alt="image"><br clear="all">
+    <p class="MsoNormal" align="center" style='margin-top:0in;margin-right:0in; margin-bottom:0in;margin-left:62.65pt;text-align:center'><img src="{{asset('images/header.jpg') }}" alt="image header"><br clear="all">
     <b><span style='font-size:4.0pt;line-height:107%;font-family:"Bookman Old Style",serif'>&nbsp;</span></b></p>
     <table class="TableGrid" border="0" cellspacing="0" cellpadding="0" width="620" style='width:464.7pt;margin-left:47.3pt;border-collapse:collapse'>
       <tr style='height:21.1pt'>

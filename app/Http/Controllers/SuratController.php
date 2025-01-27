@@ -34,7 +34,7 @@ class SuratController extends Controller
             //return view('bpom.persuratan.pdf.nodin',['data'=>$data]);
         }elseif($exportType == 'st'){
             $pdf = Pdf::loadview('pages.bpom.persuratan.pdf.st');
-            return $pdf->download('st.pdf');
+            return $pdf->stream('st.pdf');
             //return view('bpom.persuratan.pdf.st',['data'=>$data]);
         }
     }
