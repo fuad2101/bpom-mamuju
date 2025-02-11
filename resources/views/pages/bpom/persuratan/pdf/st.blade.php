@@ -19,6 +19,21 @@
     .head~p{
         line-height: 0%;
     }
+    table td{
+        border: 2px solid black;
+    }
+    table{
+        background-color: yellow;
+        width: 80px;
+    }
+    .poin{
+        padding-top: 7px;
+        color: red;
+        vertical-align: top;
+    }
+    td.poin{
+        padding-left: 20px;
+    }
 </style>
 @endpush
 
@@ -27,47 +42,37 @@
         <img id="kop" src="{{public_path('/storage/images/header.jpg')}}" alt="kop">
 </header>
 
-<p class="head">SURAT TUGAS</p>
-<p class="head" >NOMOR : PM.01.02.10B.01.24.15</p>
+<p style="text-align: center">SURAT TUGAS <br> NOMOR : PM.01.02.10B.01.24.15</p>
 
 <div>
-<p style="text-align: left;">&nbsp;</p>
-
-<div class="container">
-    <table style="height: 56px; width: 1033px;" cellpadding="0">
-        <tbody>
-        <tr style="text-align: center; height: 73px;">
-        <td style="width: 111px; text-align: right; vertical-align: top; height: 73px;">Menimbang :&nbsp;</td>
-        <td style="width: 906px; text-align: left; vertical-align: top; height: 73px;">
-        <ol>
-        <li>
-        <div>bahwa dalam rangka Pemberdayaan pada Masyarakat Tahun 2024 perlu dilaksanakan kegiatan Komunikasi Informasi dan Edukasi Bersama Tokoh Masyarakat (KIE)</div>
-        </li>
-        <li>
-        <div>bahwa yang namanya tercantum dalam lampiran surat ini telah memenuhi syarat yang diperlukan untuk diserahi tugas dimaksud</div>
-        </li>
-        </ol>
-        </td>
-        </tr>
-        <tr style="text-align: center; height: 73px;">
-        <td style="width: 111px; text-align: right; vertical-align: top; height: 73px;">Dasar:&nbsp;</td>
-        <td style="width: 906px; text-align: left; vertical-align: top; height: 73px;">
-        <div>
-        <ol>
-        <li>Undang &amp;ndash; Undang N0. 36 Tahun 2009 tentang Kesehatan</li>
-        <li>
-        <div>
-        <div>Undang - Undang No.18 Tahun 2012 tentang Pangan</div>
-        </div>
-        </li>
-        </ol>
-        </div>
-        </td>
-        </tr>
-        </tbody>
-    </table>
-</div>
-</div>
+    <div class="container">
+        <table style="" cellpadding="0">
+            <tbody class="table">
+                <tr >
+                    <td class="poin">Menimbang :&nbsp;</td>
+                    <td>
+                    <ol>
+                        <li>
+                        bahwa dalam rangka Pemberdayaan pada Masyarakat Tahun 2024 perlu dilaksanakan kegiatan Komunikasi Informasi dan Edukasi Bersama Tokoh Masyarakat (KIE)
+                        </li>
+                        <li>
+                        bahwa yang namanya tercantum dalam lampiran surat ini telah memenuhi syarat yang diperlukan untuk diserahi tugas dimaksud
+                        </li>
+                    </ol>
+                    </td>
+                </tr>
+                <tr style="text-align: center; height: 73px;">
+                    <td class="poin">Dasar:&nbsp;</td>
+                    <td style="width: 906px; text-align: left; vertical-align: top; height: 73px;">
+                        <ol>
+                            <li>Undang &amp;ndash; Undang N0. 36 Tahun 2009 tentang Kesehatan</li>
+                            <li> Undang - Undang No.18 Tahun 2012 tentang Pangan</li>
+                        </ol>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
 
 
