@@ -10,7 +10,7 @@
     }
     #kop,#kop-footer{
         width: 100%;
-        margin: -20px;
+        /* margin: -20px; */
     }
     .head{
         text-align: center;
@@ -20,19 +20,20 @@
         line-height: 0%;
     }
     table td{
-        border: 2px solid black;
+        /* border: 2px solid black; */
     }
     table{
-        background-color: yellow;
-        width: 80px;
+        /* background-color: yellow; */
+        width: 100%;
+        overflow:wrap;
     }
     .poin{
         padding-top: 7px;
-        color: red;
+        /* color: red; */
         vertical-align: top;
     }
     td.poin{
-        padding-left: 20px;
+        /* padding-left: 20px; */
     }
 </style>
 @endpush
@@ -49,7 +50,7 @@
         <table style="" cellpadding="0">
             <tbody class="table">
                 <tr >
-                    <td class="poin">Menimbang :&nbsp;</td>
+                    <td class="poin">Menimbang:</td>
                     <td>
                     <ol>
                         <li>
@@ -61,9 +62,9 @@
                     </ol>
                     </td>
                 </tr>
-                <tr style="text-align: center; height: 73px;">
+                <tr>
                     <td class="poin">Dasar:&nbsp;</td>
-                    <td style="width: 906px; text-align: left; vertical-align: top; height: 73px;">
+                    <td >
                         <ol>
                             <li>Undang &amp;ndash; Undang N0. 36 Tahun 2009 tentang Kesehatan</li>
                             <li> Undang - Undang No.18 Tahun 2012 tentang Pangan</li>
