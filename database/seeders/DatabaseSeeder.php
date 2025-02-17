@@ -20,7 +20,7 @@ class DatabaseSeeder extends Seeder
             "name"=>"mamuju",
             "email"=>"mamujuulpk@gmail.com",
             "email_verified_at"=>now(),
-            "password"=> Hash::make('yudistar'),
+            "password"=> Hash::make('m4m11711'),
         ]);
 
         \App\Models\Pegawai::factory(15)->create();

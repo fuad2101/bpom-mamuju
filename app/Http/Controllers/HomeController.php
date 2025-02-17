@@ -26,7 +26,7 @@ class HomeController extends Controller
     {
         // $userModel = User::all();
         // Session::put('user',Auth::)
-        return view('pages.bpom.index');
+        return view('pages.index');
     }
     public function pegawai(){
         return view('bpom.pegawai');

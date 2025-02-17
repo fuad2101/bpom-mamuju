@@ -17,7 +17,7 @@ class pegawaiController extends Controller
     {
 
 
-        return $datatable->render('pages.bpom.pegawai.index');
+        return $datatable->render('pages.pegawai.index');
         //$data = $datatable->render();
         //$data = Pegawai::all();
         //return view('')->with('data',$data);
@@ -30,7 +30,7 @@ class pegawaiController extends Controller
      */
     public function create(Request $request)
     {
-        return view('bpom.pegawai.create');
+        return view('pages.pegawai.create');
     }
 
     /**

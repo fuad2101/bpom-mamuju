@@ -122,7 +122,6 @@
               <h6 class="collapse-header">Buat Surat</h6>
               <a class="collapse-item" href="{{url('/surat/st')}}">Surat Tugas</a>
               <a class="collapse-item" href=" {{url('/surat/nodin')}} ">Nota Dinas</a>
-              <a class="collapse-item" href=" {{url('/surat/nodin')}} ">Penciptaan</a>
             </div>
           </div>
         </li>
@@ -150,7 +149,7 @@
               <h6 class="collapse-header">Daftar Arsip </h6>
               <a class="collapse-item disabled" href="#" >Aktif</a>
               <a class="collapse-item" href="#">Inaktif</a>
-              <a class="collapse-item" href="/vital">Daftar Arsip Vital</a>
+              <a class="collapse-item" href="#">Daftar Arsip Vital</a>
             </div>
           </div>
         </li>
