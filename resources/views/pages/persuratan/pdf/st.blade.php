@@ -14,26 +14,38 @@
     }
     .head{
         text-align: center;
-
     }
     .head~p{
         line-height: 0%;
     }
-    table td{
-        /* border: 2px solid black; */
+    header{
+        margin: 0px;
+    }
+    table.petugas td,table.petugas th{
+        border: 1px solid black;
+        padding: 10px;
+    }
+    table.petugas{
+        border-spacing: 0px;
     }
     table{
-        /* background-color: yellow; */
         width: 100%;
         overflow:wrap;
     }
     .poin{
         padding-top: 7px;
-        /* color: red; */
         vertical-align: top;
     }
     td.poin{
         /* padding-left: 20px; */
+    }
+    .ttd,.lampiran{
+        margin-top: 50px;
+        margin-left: 50%;
+    }
+    .container{
+        margin: 0px;
+        padding: 0px;
     }
 </style>
 @endpush
@@ -71,60 +83,73 @@
                         </ol>
                     </td>
                 </tr>
+                <tr>
+                    <td class="poin">Kepada:&nbsp;</td>
+                    <td >
+                        Nama-nama terlampir
+                    </td>
+                </tr>
+                <tr>
+                    <td class="poin">Untuk:&nbsp;</td>
+                    <td >
+                        <ol>
+                            <li>Menjadi Petugas Pelaksana Kegiatan Forum Konsultasi Publik Tahun 2025</li>
+                            <li>Melaksanakan tugas dengan penuh tanggung jawab;</li>
+                            <li>Melaporkan hasil kegiatan kepada Kepala Balai POM di Mamuju</li>
+                            <li>Surat tugas ini berlaku pada tanggal 25 Februari 2025</li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">Agar yang bersangkutan melaksanakan tugas dengan baik dan penuh tanggung jawab.</td>
+                </tr>
             </tbody>
         </table>
+        <div class="ttd">
+            <p>Mamuju, <?php echo date('d M Y') ?><br>Plt. Kepala Balai POM Di Mamuju </p>
+            <br>
+            <br>
+            <p>${ttd_pengirim}</p>
+            <br>
+            <br>
+            <p>Suliyanto, SH.,MH</p>
+        </div>
+        <p style="border:1px solid black;padding:1px;text-align:center; ">Petugas tidak diperkenankan menerima gratifikasi dalam bentuk apapun</p>
     </div>
 </div>
 
+<div class="lampiran">
+    <p>Lampiran<br>Surat Tugas<br>Nomor:<br>Tanggal:<?php echo date('d M Y') ?> </p>
+</div>
+<p style="text-align:center;margin-top:20px;">DAFTAR NAMA YANG DIBERI PERINTAH</p>
+<table class="petugas">
+    <thead>
+        <tr>
+            <th>NO</th>
+            <th>NAMA</th>
+            <th>NIP</th>
+            <th>PANGKAT/GOL.RUANG</th>
+            <th>JABATAN</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1.</td>
+            <td>Muh.Fuad</td>
+            <td>-</td>
+            <td>-</td>
+            <td>Tenaga Administrasi Substansi Infokom</td>
+        </tr>
+    </tbody>
+</table>
+<div class="ttd">
+            <p>Mamuju, <?php echo date('d M Y') ?><br>Plt. Kepala Balai POM Di Mamuju </p>
+            <br>
+            <br>
+            <p>${ttd_pengirim}</p>
+            <br>
+            <br>
+            <p>Suliyanto, SH.,MH</p>
+</div>
 
-    {{-- <div class="container">
-        <p class="center">SURAT TUGAS</p>
-        <p class="center">NOMOR : PM.01.02.10B.01.24.15</p>
-        <p><br /></p>
-        <p>Menimbang :&nbsp;</p>
-        <ol style="list-style-type: lower-alpha">
-            <li>
-                bahwa dalam rangka Pemberdayaan pada Masyarakat Tahun 2024
-                perlu dilaksanakan kegiatan Komunikasi Informasi dan Edukasi
-                Bersama Tokoh Masyarakat (KIE)
-            </li>
-            <li>
-                bahwa yang namanya tercantum dalam &nbsp;lampiran
-                &nbsp;surat ini telah memenuhi syarat yang diperlukan untuk
-                diserahi tugas dimaksud.
-            </li>
-        </ol>
-        <p>Dasar :&nbsp;</p>
-        <ol>
-            <li>
-                Undang &ndash; Undang N0. 36 Tahun 2009 tentang Kesehatan
-            </li>
-            <li>2. Undang - Undang No.18 Tahun 2012 tentang Pangan</li>
-            <li>
-                3. Peraturan Pemerintah No. 86 Tahun 2019 tentang Keamanan
-                Pangan
-            </li>
-            <li>
-                Peraturan Menteri Kesehatan Republik Indonesia Nomor 17
-                Tahun 2020 Tentang Pasar Sehat
-            </li>
-        </ol>
-        <p>Kepada : Nama-nama terlampir.</p>
-        <p>Untuk:&nbsp;</p>
-        <p>
-            1. Menjadi Petugas Pelaksana Kegiatan KIE Bersama Tomas di
-            Kabupaten Polewali Mandar;
-        </p>
-        <p>2. Melaksanakan tugas dengan penuh tanggung jawab;</p>
-        <p>
-            3. Melaporkan hasil kegiatan kepada Kepala Balai POM di Mamuju;
-        </p>
-        <p>4. Surat tugas ini berlaku pada tanggal 22 - 25 Januari 2024</p>
-        <p>
-            Agar &nbsp; yang &nbsp; bersangkutan &nbsp; melaksanakan &nbsp;
-            tugas &nbsp; dengan baik dan penuh tanggung jawab.
-        </p>
-        <p><br /></p>
-        <p><br /></p>
-    </div> --}}
 @endsection
