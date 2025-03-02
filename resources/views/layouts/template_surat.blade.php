@@ -13,9 +13,7 @@
     @yield('content')
 </div>
 
-<footer>
-    <img id="kop-footer" src="{{public_path('/storage/images/footer.png')}}" alt="">
-</footer>
+
 
 <body>
 </html>

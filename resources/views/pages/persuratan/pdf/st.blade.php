@@ -19,10 +19,10 @@
         line-height: 0%;
     }
     header{
-        margin: 0px;
+        margin: -30px -30px 0px -30px;
     }
-    table.petugas td,table.petugas th{
-        border: 1px solid black;
+    table.petugas th,table.petugas td{
+        border: 0.5px solid black;
         padding: 10px;
     }
     table.petugas{
@@ -30,22 +30,55 @@
     }
     table{
         width: 100%;
-        overflow:wrap;
     }
-    .poin{
+    table.dasar td{
         padding-top: 7px;
         vertical-align: top;
     }
-    td.poin{
-        /* padding-left: 20px; */
+    table.dasar ol{
+        margin-top: 0;
     }
     .ttd,.lampiran{
-        margin-top: 50px;
+        margin-top: 25px;
         margin-left: 50%;
     }
     .container{
         margin: 0px;
         padding: 0px;
+    }
+    footer{
+        border: 2px solid red;
+        display: flex;
+        margin: 0px -90px 0px -30px;
+    }
+    footer img{
+        position: absolute;
+        bottom: 15px;
+        right: 5px;
+        z-index: 0;
+        border: 2px solid green;
+        object-fit: fill;
+
+
+    }
+    /* footer p{
+
+        border:1px solid black;
+        padding:1px;
+        text-align:center;
+    } */
+    .footer-petugas{
+        display: flex;
+        border: 1px solid black;
+    }
+    .footer-petugas p{
+        position: absolute;
+        bottom: 2px;
+        border: 1px solid black;
+        z-index: 1;
+    }
+    .page-break {
+        page-break-after: always;
     }
 </style>
 @endpush
@@ -59,10 +92,10 @@
 
 <div>
     <div class="container">
-        <table style="" cellpadding="0">
-            <tbody class="table">
+        <table class="dasar" cellpadding="0">
+            <tbody class="">
                 <tr >
-                    <td class="poin">Menimbang:</td>
+                    <td class="">Menimbang:</td>
                     <td>
                     <ol>
                         <li>
@@ -75,7 +108,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="poin">Dasar:&nbsp;</td>
+                    <td class="">Dasar:&nbsp;</td>
                     <td >
                         <ol>
                             <li>Undang &amp;ndash; Undang N0. 36 Tahun 2009 tentang Kesehatan</li>
@@ -84,13 +117,11 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="poin">Kepada:&nbsp;</td>
-                    <td >
-                        Nama-nama terlampir
-                    </td>
+                    <td class="">Kepada:</td>
+                    <td style="padding-left: 20px">Nama-nama terlampir</td>
                 </tr>
                 <tr>
-                    <td class="poin">Untuk:&nbsp;</td>
+                    <td class="">Untuk:&nbsp;</td>
                     <td >
                         <ol>
                             <li>Menjadi Petugas Pelaksana Kegiatan Forum Konsultasi Publik Tahun 2025</li>
@@ -108,33 +139,48 @@
         <div class="ttd">
             <p>Mamuju, <?php echo date('d M Y') ?><br>Plt. Kepala Balai POM Di Mamuju </p>
             <br>
-            <br>
-            <p>${ttd_pengirim}</p>
+            <p style="padding-left: 25px;">${ttd_pengirim}</p>
             <br>
             <br>
             <p>Suliyanto, SH.,MH</p>
         </div>
-        <p style="border:1px solid black;padding:1px;text-align:center; ">Petugas tidak diperkenankan menerima gratifikasi dalam bentuk apapun</p>
+
     </div>
 </div>
+
+<div class="footer-petugas">
+    <p class="">Petugas tidak diperkenankan menerima gratifikasi dalam bentuk apapun</p>
+</div>
+
+<footer>
+    <img id="kop-footer" src="{{public_path('/storage/images/footer.png')}}" alt="">
+</footer>
+<div class="page-break"></div>
 
 <div class="lampiran">
     <p>Lampiran<br>Surat Tugas<br>Nomor:<br>Tanggal:<?php echo date('d M Y') ?> </p>
 </div>
-<p style="text-align:center;margin-top:20px;">DAFTAR NAMA YANG DIBERI PERINTAH</p>
+<p style="text-align:center;margin-top:35px;margin-bottom:35px">DAFTAR NAMA YANG DIBERI PERINTAH</p>
 <table class="petugas">
     <thead>
         <tr>
             <th>NO</th>
             <th>NAMA</th>
             <th>NIP</th>
-            <th>PANGKAT/GOL.RUANG</th>
+            <th>PANGKAT/<br>GOL.RUANG</th>
             <th>JABATAN</th>
         </tr>
     </thead>
     <tbody>
         <tr>
             <td>1.</td>
+            <td>Nurul Mukhlisah Syahrul</td>
+            <td>76041465487548</td>
+            <td>VII/a</td>
+            <td>Pengawas Farmasi dan Makanan</td>
+        </tr>
+        <tr>
+            <td>2.</td>
             <td>Muh.Fuad</td>
             <td>-</td>
             <td>-</td>
@@ -146,7 +192,7 @@
             <p>Mamuju, <?php echo date('d M Y') ?><br>Plt. Kepala Balai POM Di Mamuju </p>
             <br>
             <br>
-            <p>${ttd_pengirim}</p>
+            <p style="padding-left: 25px;">${ttd_pengirim}</p>
             <br>
             <br>
             <p>Suliyanto, SH.,MH</p>
