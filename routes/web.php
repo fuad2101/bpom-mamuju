@@ -35,10 +35,10 @@ Route::get('/dashboard', function () {
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware(['auth', 'verified'])->name('home');
 Route::prefix('surat')->group(function(){
     Route::get('/st',function(){
-        return view('pages.persuratan.template.st');
+        return view('pages.persuratan.surat-tugas.index');
     });
     Route::get('/nodin',function(){
-        return view('pages.persuratan.template.nodin');
+        return view('pages.persuratan.nodin.index');
     });
     Route::get('/pjb',function(){
         return view('pages.bpom.persuratan.pjb');

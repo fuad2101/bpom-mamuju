@@ -1,89 +1,91 @@
-@extends('layouts.template_surat')
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <style>
+            body{
+                font-family: 'Bookman Old Style';
+                break-after: avoid;
+            }
+            #kop,#kop-footer{
+                width: 100%;
+                /* margin: -20px; */
+            }
+            .head{
+                text-align: center;
+            }
+            .head~p{
+                line-height: 0%;
+            }
+            header{
+                margin: -30px -30px 0px -30px;
+            }
+            table.petugas th,table.petugas td{
+                border: 0.5px solid black;
+                padding: 10px;
+            }
+            table.petugas{
+                border-spacing: 0px;
+            }
+            table{
+                width: 100%;
+            }
+            table.dasar td{
+                padding-top: 7px;
+                vertical-align: top;
+            }
+            table.dasar ol{
+                margin-top: 0;
+            }
+            .ttd,.lampiran{
+                margin-top: 25px;
+                margin-left: 50%;
+            }
+            .container{
+                margin: 0px;
+                padding: 0px;
+            }
+            footer{
+                border: 2px solid red;
+                display: flex;
+                margin: 0px -90px 0px -30px;
+            }
+            footer img{
+                position: absolute;
+                bottom: 15px;
+                right: 5px;
+                z-index: 0;
+                border: 2px solid green;
+                object-fit: fill;
 
-@section('jns-surat','Surat Tugas')
 
-@push('style')
-<style>
-    body{
-        font-family: 'Bookman Old Style';
-        break-after: avoid;
-    }
-    #kop,#kop-footer{
-        width: 100%;
-        /* margin: -20px; */
-    }
-    .head{
-        text-align: center;
-    }
-    .head~p{
-        line-height: 0%;
-    }
-    header{
-        margin: -30px -30px 0px -30px;
-    }
-    table.petugas th,table.petugas td{
-        border: 0.5px solid black;
-        padding: 10px;
-    }
-    table.petugas{
-        border-spacing: 0px;
-    }
-    table{
-        width: 100%;
-    }
-    table.dasar td{
-        padding-top: 7px;
-        vertical-align: top;
-    }
-    table.dasar ol{
-        margin-top: 0;
-    }
-    .ttd,.lampiran{
-        margin-top: 25px;
-        margin-left: 50%;
-    }
-    .container{
-        margin: 0px;
-        padding: 0px;
-    }
-    footer{
-        border: 2px solid red;
-        display: flex;
-        margin: 0px -90px 0px -30px;
-    }
-    footer img{
-        position: absolute;
-        bottom: 15px;
-        right: 5px;
-        z-index: 0;
-        border: 2px solid green;
-        object-fit: fill;
+            }
+            /* footer p{
 
+                border:1px solid black;
+                padding:1px;
+                text-align:center;
+            } */
+            .footer-petugas{
+                display: flex;
+                border: 1px solid black;
+            }
+            .footer-petugas p{
+                position: absolute;
+                bottom: 2px;
+                border: 1px solid black;
+                z-index: 1;
+            }
+            .page-break {
+                page-break-after: always;
+            }
+        </style>
+        <title>Surat Tugas</title>
+    </head>
+<body>
 
-    }
-    /* footer p{
-
-        border:1px solid black;
-        padding:1px;
-        text-align:center;
-    } */
-    .footer-petugas{
-        display: flex;
-        border: 1px solid black;
-    }
-    .footer-petugas p{
-        position: absolute;
-        bottom: 2px;
-        border: 1px solid black;
-        z-index: 1;
-    }
-    .page-break {
-        page-break-after: always;
-    }
-</style>
-@endpush
-
-@section('content')
 <header>
         <img id="kop" src="{{public_path('/storage/images/header.jpg')}}" alt="kop">
 </header>
@@ -155,12 +157,15 @@
 <footer>
     <img id="kop-footer" src="{{public_path('/storage/images/footer.png')}}" alt="">
 </footer>
+
 <div class="page-break"></div>
 
 <div class="lampiran">
     <p>Lampiran<br>Surat Tugas<br>Nomor:<br>Tanggal:<?php echo date('d M Y') ?> </p>
 </div>
+
 <p style="text-align:center;margin-top:35px;margin-bottom:35px">DAFTAR NAMA YANG DIBERI PERINTAH</p>
+
 <table class="petugas">
     <thead>
         <tr>
@@ -188,14 +193,16 @@
         </tr>
     </tbody>
 </table>
+
 <div class="ttd">
-            <p>Mamuju, <?php echo date('d M Y') ?><br>Plt. Kepala Balai POM Di Mamuju </p>
-            <br>
-            <br>
-            <p style="padding-left: 25px;">${ttd_pengirim}</p>
-            <br>
-            <br>
-            <p>Suliyanto, SH.,MH</p>
+    <p>Mamuju, <?php echo date('d M Y') ?><br>Plt. Kepala Balai POM Di Mamuju </p>
+    <br>
+    <br>
+    <p style="padding-left: 25px;">${ttd_pengirim}</p>
+    <br>
+    <br>
+    <p>Suliyanto, SH.,MH</p>
 </div>
 
-@endsection
+<body>
+</html>

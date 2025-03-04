@@ -29,11 +29,11 @@ class SuratController extends Controller
         $data = $request->all();
         if($exportType == 'nodin'){
             //dd($data);
-            $pdf = Pdf::loadview('pages.bpom.persuratan.pdf.nodin',['data'=>$data]);
+            $pdf = Pdf::loadview('pages.persuratan.nodin.export',['data'=>$data]);
             return $pdf->stream('nodin.pdf');
             //return view('bpom.persuratan.pdf.nodin',['data'=>$data]);
         }elseif($exportType == 'st'){
-            $pdf = Pdf::loadview('pages.persuratan.pdf.st');
+            $pdf = Pdf::loadview('pages.persuratan.surat-tugas.export');
             return $pdf->stream('st.pdf');
             //return view('bpom.persuratan.pdf.st',['data'=>$data]);
         }
