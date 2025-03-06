@@ -45,23 +45,38 @@
             }
             .container{
                 margin: 0px;
-                padding: 0px;
+                padding: 0px 30px;
             }
             footer{
-                border: 2px solid red;
-                display: flex;
-                margin: 0px -90px 0px -30px;
-            }
-            footer img{
                 position: absolute;
-                bottom: 15px;
-                right: 5px;
+                bottom: -43px;
+                /* border: 2px solid red; */
+                height: 30%;
+                width: 115%;
+                margin: 0 -45px;
+                background-image: url('storage/images/footer.png');
+                background-repeat:no-repeat;
+                background-attachment: fixed;
+                background-position: center bottom;
+                background-size: cover;
                 z-index: 0;
+
+
+                /* display: flex; */
+                /* margin: 0px -90px 0px -30px; */
+            }
+            /* footer img{
+                position: relative;
+                top: -595px;
+                widows: 100%;
+                right: 5px;
+                margin:0%;
+                z-index: 1;
                 border: 2px solid green;
                 object-fit: fill;
 
 
-            }
+            } */
             /* footer p{
 
                 border:1px solid black;
@@ -69,14 +84,16 @@
                 text-align:center;
             } */
             .footer-petugas{
-                display: flex;
-                border: 1px solid black;
+                position: absolute;
+                bottom:5px;
+                left:50px;
+                z-index: 1;
             }
             .footer-petugas p{
-                position: absolute;
-                bottom: 2px;
+                /* position: absolute; */
+                /* bottom: 2px; */
+                text-align: center;
                 border: 1px solid black;
-                z-index: 1;
             }
             .page-break {
                 page-break-after: always;
@@ -98,15 +115,16 @@
             <tbody class="">
                 <tr >
                     <td class="">Menimbang:</td>
+                    <td>:</td>
                     <td>
-                    <ol>
-                        <li>
-                        bahwa dalam rangka Pemberdayaan pada Masyarakat Tahun 2024 perlu dilaksanakan kegiatan Komunikasi Informasi dan Edukasi Bersama Tokoh Masyarakat (KIE)
-                        </li>
-                        <li>
-                        bahwa yang namanya tercantum dalam lampiran surat ini telah memenuhi syarat yang diperlukan untuk diserahi tugas dimaksud
-                        </li>
-                    </ol>
+                        <ol>
+                            <li>
+                            bahwa dalam rangka Pemberdayaan pada Masyarakat Tahun 2024 perlu dilaksanakan kegiatan Komunikasi Informasi dan Edukasi Bersama Tokoh Masyarakat (KIE)
+                            </li>
+                            <li>
+                            bahwa yang namanya tercantum dalam lampiran surat ini telah memenuhi syarat yang diperlukan untuk diserahi tugas dimaksud
+                            </li>
+                        </ol>
                     </td>
                 </tr>
                 <tr>
@@ -155,7 +173,7 @@
 </div>
 
 <footer>
-    <img id="kop-footer" src="{{public_path('/storage/images/footer.png')}}" alt="">
+    {{-- <img id="kop-footer" src="{{public_path('/storage/images/footer.png')}}" alt=""> --}}
 </footer>
 
 <div class="page-break"></div>
