@@ -20,7 +20,7 @@
                 line-height: 0%;
             }
             header{
-                margin: -30px -30px 0px -30px;
+                margin: -60px -10px 0px -20px;
             }
             table.petugas th,table.petugas td{
                 border: 0.5px solid black;
@@ -35,9 +35,14 @@
             table.dasar td{
                 padding-top: 7px;
                 vertical-align: top;
+                border-collapse: collapse;
             }
             table.dasar ol{
                 margin-top: 0;
+            }
+            .dasar li{
+                line-height:20pt;
+                text-align: justify;
             }
             .ttd,.lampiran{
                 margin-top: 25px;
@@ -94,6 +99,7 @@
                 /* bottom: 2px; */
                 text-align: center;
                 border: 1px solid black;
+                padding: 5px 55px 5px 55px;
             }
             .page-break {
                 page-break-after: always;
@@ -113,11 +119,11 @@
     <div class="container">
         <table class="dasar" cellpadding="0">
             <tbody class="">
-                <tr >
-                    <td class="">Menimbang:</td>
+                <tr>
+                    <td class="">Menimbang</td>
                     <td>:</td>
                     <td>
-                        <ol>
+                        <ol type="a">
                             <li>
                             bahwa dalam rangka Pemberdayaan pada Masyarakat Tahun 2024 perlu dilaksanakan kegiatan Komunikasi Informasi dan Edukasi Bersama Tokoh Masyarakat (KIE)
                             </li>
@@ -129,19 +135,24 @@
                 </tr>
                 <tr>
                     <td class="">Dasar:&nbsp;</td>
+                    <td>:</td>
                     <td >
                         <ol>
-                            <li>Undang &amp;ndash; Undang N0. 36 Tahun 2009 tentang Kesehatan</li>
-                            <li> Undang - Undang No.18 Tahun 2012 tentang Pangan</li>
+                            <li>Undang – Undang N0. 36 Tahun 2009 tentang Kesehatan</li>
+                            <li>Undang - Undang No.18 Tahun 2012 tentang Pangan</li>
+                            <li>Peraturan Pemerintah No. 86 Tahun 2019 tentang Keamanan Pangan</li>
+                            <li>Peraturan Menteri Kesehatan Republik Indonesia Nomor 17 Tahun 2020 Tentang Pasar Sehat</li>
                         </ol>
                     </td>
                 </tr>
                 <tr>
-                    <td class="">Kepada:</td>
+                    <td class="">Kepada</td>
+                    <td>:</td>
                     <td style="padding-left: 20px">Nama-nama terlampir</td>
                 </tr>
                 <tr>
-                    <td class="">Untuk:&nbsp;</td>
+                    <td class="">Untuk</td>
+                    <td>:</td>
                     <td >
                         <ol>
                             <li>Menjadi Petugas Pelaksana Kegiatan Forum Konsultasi Publik Tahun 2025</li>
@@ -152,7 +163,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td colspan="2">Agar yang bersangkutan melaksanakan tugas dengan baik dan penuh tanggung jawab.</td>
+                    <td colspan="3">Agar yang bersangkutan melaksanakan tugas dengan baik dan penuh tanggung jawab.</td>
                 </tr>
             </tbody>
         </table>
