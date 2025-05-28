@@ -18,7 +18,7 @@
                 <input type="hidden" name="exportType" value="st">
                 <div class="col-md-4 mb-3">
                     <label for="no_surat" class="form-label">Nomor Surat</label>
-                    <input type="text" name="" id="no_surat" class="form-control">
+                    <input type="text" name="nomor" id="no_surat" class="form-control">
 
                 </div>
                 <div class="col-md-4 mb-3">

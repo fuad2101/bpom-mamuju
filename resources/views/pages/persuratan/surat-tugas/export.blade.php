@@ -110,10 +110,10 @@
 <body>
 
 <header>
-        <img id="kop" src="{{public_path('/storage/images/header.jpg')}}" alt="kop">
+        <img id="kop" src="{{public_path('/images/header.jpg')}}" alt="kop">
 </header>
 
-<p style="text-align: center">SURAT TUGAS <br> NOMOR : PM.01.02.10B.01.24.15</p>
+<p style="text-align: center">SURAT TUGAS <br> NOMOR : {{$data['nomor']}}</p>
 
 <div>
     <div class="container">
@@ -168,12 +168,12 @@
             </tbody>
         </table>
         <div class="ttd">
-            <p>Mamuju, <?php echo date('d M Y') ?><br>Plt. Kepala Balai POM Di Mamuju </p>
+            <p>Mamuju, <?php echo date('d M Y') ?><br>Kepala Balai POM Di Mamuju </p>
             <br>
             <p style="padding-left: 25px;">${ttd_pengirim}</p>
             <br>
             <br>
-            <p>Suliyanto, SH.,MH</p>
+            <p>BURHAM SIDOBEJO, SH.,MH</p>
         </div>
 
     </div>
@@ -184,7 +184,7 @@
 </div>
 
 <footer>
-    {{-- <img id="kop-footer" src="{{public_path('/storage/images/footer.png')}}" alt=""> --}}
+    <img id="kop-footer" src="{{public_path('/images/footer.png')}}" alt="">
 </footer>
 
 <div class="page-break"></div>
@@ -224,13 +224,13 @@
 </table>
 
 <div class="ttd">
-    <p>Mamuju, <?php echo date('d M Y') ?><br>Plt. Kepala Balai POM Di Mamuju </p>
+    <p>Mamuju, <?php echo date('d M Y') ?><br>Kepala Balai POM Di Mamuju </p>
     <br>
     <br>
     <p style="padding-left: 25px;">${ttd_pengirim}</p>
     <br>
     <br>
-    <p>Suliyanto, SH.,MH</p>
+    <p>BURHAM SIDOBEJO, SH.,MH</p>
 </div>
 
 <body>
