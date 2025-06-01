@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
 use PhpOffice\PhpWord\PhpWord as phpword;
 use Barryvdh\DomPDF\Facade\Pdf;
 //use Illuminate\Support\Facades\Request;
@@ -35,7 +36,47 @@ class SuratController extends Controller
 
         }elseif($exportType == 'st'){
 
-            $pdf = Pdf::loadview('pages.persuratan.surat-tugas.export',['data'=>$data]);
+            $kegiatan = null;
+            switch ($request->kegiatan) {
+                case 'kie_tomas':
+                    $kegiatan = 'bahwa dalam rangka Pemberdayaan pada Masyarakat Tahun
+                                2024 perlu dilaksanakan kegiatan Komunikasi Informasi dan
+                                Edukasi (KIE) Bersama Tokoh Masyarakat ';
+                    break;
+                case 'lainnya':
+                     $kegiatan = $request->desc_kegiatan;
+                    break;
+
+                default:
+                    $kegiatan = 'Default kegiatan';
+                    break;
+            }
+
+            $tanggal_surat = Carbon::now()->isoFormat('D MMMM YYYY');
+            $tanggal_berlaku = NULL;
+            $tanggal_mulai = $request->tanggal_mulai ;
+            $tanggal_akhir = $request->tanggal_akhir ;
+
+            if ($tanggal_mulai != $tanggal_akhir) {
+                $carbonMulai = Carbon::parse($tanggal_mulai);
+                $carbonAkhir = Carbon::parse($tanggal_akhir);
+                $tanggal_mulai = $carbonMulai->isoFormat('D MMMM YYYY');
+                $tanggal_akhir = $carbonAkhir->isoFormat('D MMMM YYYY');
+                $tanggal_berlaku = 'mulai tanggal '.$tanggal_mulai.' s/d '.$tanggal_akhir;
+            }else {
+                $carbonDate = Carbon::parse($tanggal_mulai);
+                $isoFormat = $carbonDate->isoFormat('D MMMM YYYY');
+                $tanggal_berlaku = 'pada tanggal '.$isoFormat;
+            }
+
+            $petugas = [
+                'nama'=>'MUh. Fuad, ST',
+                'nip'=>'604142405940002',
+                'jabatan'=>'Tenaga Administrasi Substansi Infokom',
+                'pangkat'=>'-',
+            ];
+
+            $pdf = Pdf::loadview('pages.persuratan.surat-tugas.export',['data'=>$data,'kegiatan'=>$kegiatan,'petugas'=>$petugas,'tanggal_berlaku'=>$tanggal_berlaku,'tanggal_surat'=>$tanggal_surat]);
             return $pdf->stream('st.pdf');
         }
     }

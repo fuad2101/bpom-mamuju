@@ -5,13 +5,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <style>
+            @font-face {
+                font-family: 'Bookman Old Style_bold';
+                src: url('./storage/fonts/bookmanoldstyle_bold.ttf'),
+                font-weight: bold;
+                font-style: normal;
+            }
             body{
                 font-family: 'Bookman Old Style';
                 break-after: avoid;
             }
             #kop,#kop-footer{
                 width: 100%;
-                /* margin: -20px; */
             }
             .head{
                 text-align: center;
@@ -41,7 +46,7 @@
                 margin-top: 0;
             }
             .dasar li{
-                line-height:20pt;
+                /* line-height:20pt; */
                 text-align: justify;
             }
             .ttd,.lampiran{
@@ -54,8 +59,7 @@
             }
             footer{
                 position: absolute;
-                bottom: -43px;
-                /* border: 2px solid red; */
+                bottom: -75px;
                 height: 30%;
                 width: 115%;
                 margin: 0 -45px;
@@ -65,10 +69,6 @@
                 background-position: center bottom;
                 background-size: cover;
                 z-index: 0;
-
-
-                /* display: flex; */
-                /* margin: 0px -90px 0px -30px; */
             }
             /* footer img{
                 position: relative;
@@ -88,13 +88,13 @@
                 padding:1px;
                 text-align:center;
             } */
-            .footer-petugas{
+            .footer-teks{
                 position: absolute;
                 bottom:5px;
                 left:50px;
                 z-index: 1;
             }
-            .footer-petugas p{
+            .footer-teks p, {
                 /* position: absolute; */
                 /* bottom: 2px; */
                 text-align: center;
@@ -116,7 +116,7 @@
 <p style="text-align: center">SURAT TUGAS <br> NOMOR : {{$data['nomor']}}</p>
 
 <div>
-    <div class="container">
+    <div class="container" style="padding-left:50px;padding-right:50px;">
         <table class="dasar" cellpadding="0">
             <tbody class="">
                 <tr>
@@ -125,7 +125,7 @@
                     <td>
                         <ol type="a">
                             <li>
-                            bahwa dalam rangka Pemberdayaan pada Masyarakat Tahun 2024 perlu dilaksanakan kegiatan Komunikasi Informasi dan Edukasi Bersama Tokoh Masyarakat (KIE)
+                            {{$kegiatan}}
                             </li>
                             <li>
                             bahwa yang namanya tercantum dalam lampiran surat ini telah memenuhi syarat yang diperlukan untuk diserahi tugas dimaksud
@@ -134,16 +134,18 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="">Dasar:&nbsp;</td>
+                    <td class="">Dasar</td>
                     <td>:</td>
                     <td >
                         <ol>
                             <li>Undang – Undang N0. 36 Tahun 2009 tentang Kesehatan</li>
                             <li>Undang - Undang No.18 Tahun 2012 tentang Pangan</li>
                             <li>Peraturan Pemerintah No. 86 Tahun 2019 tentang Keamanan Pangan</li>
-                            <li>Peraturan Menteri Kesehatan Republik Indonesia Nomor 17 Tahun 2020 Tentang Pasar Sehat</li>
                         </ol>
                     </td>
+                </tr>
+                <tr>
+                    <td colspan="4" style="text-align:center;padding-top:10px;padding-bottom:10px;">Memberi Perintah</td>
                 </tr>
                 <tr>
                     <td class="">Kepada</td>
@@ -155,10 +157,10 @@
                     <td>:</td>
                     <td >
                         <ol>
-                            <li>Menjadi Petugas Pelaksana Kegiatan Forum Konsultasi Publik Tahun 2025</li>
+                            <li>Menjadi Petugas Pelaksana Kegiatan {{$data['desc_kegiatan']}}</li>
                             <li>Melaksanakan tugas dengan penuh tanggung jawab;</li>
                             <li>Melaporkan hasil kegiatan kepada Kepala Balai POM di Mamuju</li>
-                            <li>Surat tugas ini berlaku pada tanggal 25 Februari 2025</li>
+                            <li>Surat tugas ini berlaku {{$tanggal_berlaku}}</li>
                         </ol>
                     </td>
                 </tr>
@@ -168,18 +170,16 @@
             </tbody>
         </table>
         <div class="ttd">
-            <p>Mamuju, <?php echo date('d M Y') ?><br>Kepala Balai POM Di Mamuju </p>
-            <br>
-            <p style="padding-left: 25px;">${ttd_pengirim}</p>
-            <br>
-            <br>
+            <p>Mamuju, {{$tanggal_surat}}<br>Kepala Balai POM Di Mamuju </p>
+            <p style="padding-left: 25px;margin-top:50px;margin-bottom:50px;">${ttd_pengirim}</p>
             <p>BURHAM SIDOBEJO, SH.,MH</p>
+
         </div>
 
     </div>
 </div>
 
-<div class="footer-petugas">
+<div class="footer-teks">
     <p class="">Petugas tidak diperkenankan menerima gratifikasi dalam bentuk apapun</p>
 </div>
 
@@ -188,48 +188,54 @@
 </footer>
 
 <div class="page-break"></div>
-
+<p style="text-align:center">-2-</p>
 <div class="lampiran">
-    <p>Lampiran<br>Surat Tugas<br>Nomor:<br>Tanggal:<?php echo date('d M Y') ?> </p>
+    <table>
+        <tr>
+            <td style="font-family:'Bookman Old Style_bold';">Lampiran</td>
+        </tr>
+        <tr>
+            <td>Surat Tugas</td>
+        </tr>
+        <tr>
+            <td>Nomor</td>
+            <td>:</td>
+            <td>{{$data['nomor']}}</td>
+        </tr>
+        <tr>
+            <td>Tanggal</td>
+            <td>:</td>
+            <td>{{$tanggal_surat}}</td>
+        </tr>
+    </table>
 </div>
 
 <p style="text-align:center;margin-top:35px;margin-bottom:35px">DAFTAR NAMA YANG DIBERI PERINTAH</p>
 
 <table class="petugas">
-    <thead>
+    <thead style="text-align:center;background-color:#F2F2F2;">
         <tr>
-            <th>NO</th>
-            <th>NAMA</th>
-            <th>NIP</th>
-            <th>PANGKAT/<br>GOL.RUANG</th>
-            <th>JABATAN</th>
+            <td>NO</td>
+            <td>NAMA</td>
+            <td>NIP</td>
+            <td>PANGKAT/<br>GOL.RUANG</td>
+            <td>JABATAN</td>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td>1.</td>
-            <td>Nurul Mukhlisah Syahrul</td>
-            <td>76041465487548</td>
-            <td>VII/a</td>
-            <td>Pengawas Farmasi dan Makanan</td>
-        </tr>
-        <tr>
-            <td>2.</td>
-            <td>Muh.Fuad</td>
-            <td>-</td>
-            <td>-</td>
-            <td>Tenaga Administrasi Substansi Infokom</td>
+            <td>1</td>
+            <td>{{$petugas['nama']}}</td>
+            <td>{{$petugas['nip']}}</td>
+            <td>{{$petugas['pangkat']}}</td>
+            <td>{{$petugas['jabatan']}}</td>
         </tr>
     </tbody>
 </table>
 
 <div class="ttd">
-    <p>Mamuju, <?php echo date('d M Y') ?><br>Kepala Balai POM Di Mamuju </p>
-    <br>
-    <br>
-    <p style="padding-left: 25px;">${ttd_pengirim}</p>
-    <br>
-    <br>
+    <p>Mamuju, {{$tanggal_surat}} <br> Kepala Balai POM Di Mamuju </p>
+    <p style="padding-left: 25px;margin-top:50px;margin-bottom:50px;">${ttd_pengirim}</p>
     <p>BURHAM SIDOBEJO, SH.,MH</p>
 </div>
 

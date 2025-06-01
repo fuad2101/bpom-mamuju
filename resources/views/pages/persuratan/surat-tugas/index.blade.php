@@ -12,106 +12,80 @@
             >
               <h1 class="h3 mb-0 text-gray-800">Buat Surat Tugas</h1>
             </div>
-
                 <form action="/exp/pdf" method="post" class="">
                     @csrf
-                <input type="hidden" name="exportType" value="st">
-                <div class="col-md-4 mb-3">
-                    <label for="no_surat" class="form-label">Nomor Surat</label>
-                    <input type="text" name="nomor" id="no_surat" class="form-control">
-
-                </div>
-                <div class="col-md-4 mb-3">
-                    <label for="mak" class="form-label">MAK</label>
-                    <input type="text" name="" id="mak" class="form-control">
-
-                </div>
-                <div class="col-md-4 mb-3">
-                    <label for="tanggal" class="form-label">Tanggal ST</label>
-                    <input type="date" name="" id="tanggal" class="form-control">
-
-                </div>
-                <div class="col-md-4 mb-3">
-                    <label for="menimbang" class="form-label">Isi Menimbang Poin 1</label>
-                    <input type="text" name="" id="tanggal" class="form-control">
-                </div>
-                <div class="col-md-4 mb-3">
-                    <label for="nama" class="form-label">Nama Petugas</label>
-                    <input type="text" name="nama" id="nama" class="form-control">
-
-                </div>
-                <div class="col-md-4 mb-3">
-                    <label for="kegiatan" class="form-label">Kegiatan</label>
-                    <select class="form-control" name="" id="">
-                        <option value="">KIE Tomas</option>
-                        <option value="">Intensifikasi KIE</option>
-                        <option value="">Layanan Mobling</option>
-                    </select>
-
-                </div>
-                <div class="col-md-4 mb-3">
-                    <label for="kegiatan" class="form-label">Kendaraan</label>
-                    <select class="form-control" name="" id="">
-                        <option value="">Umum</option>
-                        <option value="">Dinas</option>
-                    </select>
-
-                </div>
-                <div class="col-md-4 mb-3">
-                    <label for="tujuan" class="form-label">Tujuan</label>
-                    <select class="form-control" name="tujuan" id="">
-                        <option value="">Pasangkayu</option>
-                        <option value="">Majene</option>
-                        <option value="">Polewali Mandar</option>
-                        <option value="">Mamuju</option>
-                    </select>
-
-                </div>
-                <div class="col-auto mb-3 form-inline ">
-
-                    <div class="">
-                        <label for="tanggal" class="form-label">Berangkat</label>
-                        <input class="form-control ml-2" type="date" name="" id="tanggal" class="form-control">
+                    <input type="hidden" name="exportType" value="st">
+                    <div class="row mb-3">
+                        <div class="col">
+                            <label for="no_surat" class="form-label">Nomor Surat</label>
+                            <input type="text" name="nomor" id="no_surat" class="form-control" required>
+                        </div>
                     </div>
-                    <div class="">
-                        <label for="tanggal" class="form-label">Tiba</label>
-                        <input class="form-control ml-2" type="date" name="" id="tanggal" class="form-control">
+                    <div class="row">
+                        <div class="col mb-3">
+                            <label for="desc_kegiatan" class="form-label">Kegiatan</label>
+                            <select class="form-control" name="kegiatan" id="" >
+                                <option value="kie_tomas">KIE Tomas</option>
+                                <option value="bimtek_pasar">Bimtek Pasar</option>
+                                <option value="bimtek_komunitas_desa">Bimtek Komunitas Desa</option>
+                                <option value="kie_keliling">KIE Keliling</option>
+                                <option value="lainnya">Lainnya</option>
+                            </select>
+                            <input type="text" name="desc_kegiatan" class="form-control-sm mt-2" placeholder="Isi deskripsi kegiatan" required >
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col">
+                            <label for="tanggal" class="form-label">Mulai</label>
+                            <input class="form-control ml-2" type="date" name="tanggal_mulai" id="tanggal" class="form-control" required>
+                        </div>
+                        <div class="col">
+                            <label for="tanggal" class="form-label">Sampai</label>
+                            <input class="form-control ml-2" type="date" name="tanggal_akhir" id="" class="form-control" required>
+                        </div>
+                    </div>
+                    {{-- <div class="col mb-3">
+                        <label for="menimbang" class="form-label">Menimbang Poin A</label>
+                        <textarea class="form-control" name="menimbang" id="" cols="30" rows="10"></textarea>
+                    </div> --}}
+                    <div class="row mb-3">
+                        <div class="col">
+                            <label for="nama" class="form-label">Nama Petugas</label>
+                            <input type="text" name="nama" id="nama" class="form-control">
+                        </div>
                     </div>
 
-                </div>
-
-                {{-- <div class="col-md-4 my-4 text-center">
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" name="opsi_cetak" id="sppd"><label class="form-check-label" for="sppd">SPPD</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" name="opsi_cetak" id="sptjm"disabled><label class="form-check-label" for="sptjm" >SPTJM</label>
-                    </div>
-                </div> --}}
-                    <button type="" class="btn btn-primary mb-5">Cetak Surat</button>
+                    <button type="submit" class="btn btn-primary mb-5">Cetak Surat</button>
                 </form>
-
-
           </div>
 @endsection
 
+
 @section('footer')
-<script>
-    $(document).ready(function () {
+    <script>
+        $(document).ready(function () {
 
-    const nama=[];
-    $('input[id="nama"]').tagify({
-        placeholder:'Masukkan Nama',
-        callback:{
-             function () {
-                alert('Nama Masuk');
-              }
-        }
-    });
+            const nama=[];
+            $('[name="desc_kegiatan"]').hide();
 
-    });
-</script>
+            $('[name="kegiatan"]').change(function() {
+                if ($(this).val() === 'lainnya') {
+                    $('[name="desc_kegiatan"]').show(1000);
+                }else{
+                $('[name="desc_kegiatan"]').hide(1000);
+                }
+            })
 
+            // $('input[id="nama"]').tagify({
+            //     placeholder:'Masukkan Nama',
+            //     callback:{
+            //         function () {
+            //             alert('Nama Masuk');
+            //         }
+            //     }
+            // });
+        })
+    </script>
 @endsection
 
 
