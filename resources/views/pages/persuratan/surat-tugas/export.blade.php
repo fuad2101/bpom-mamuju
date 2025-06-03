@@ -125,7 +125,7 @@
                     <td>
                         <ol type="a">
                             <li>
-                            {{$kegiatan}}
+                            {{$menimbang}}
                             </li>
                             <li>
                             bahwa yang namanya tercantum dalam lampiran surat ini telah memenuhi syarat yang diperlukan untuk diserahi tugas dimaksud
@@ -157,7 +157,7 @@
                     <td>:</td>
                     <td >
                         <ol>
-                            <li>Menjadi Petugas Pelaksana Kegiatan {{$data['desc_kegiatan']}}</li>
+                            <li>Menjadi Petugas Pelaksana Kegiatan {{$kegiatan}} di Kabupaten {{$data['kabupaten']}}</li>
                             <li>Melaksanakan tugas dengan penuh tanggung jawab;</li>
                             <li>Melaporkan hasil kegiatan kepada Kepala Balai POM di Mamuju</li>
                             <li>Surat tugas ini berlaku {{$tanggal_berlaku}}</li>

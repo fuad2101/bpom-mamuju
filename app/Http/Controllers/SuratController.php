@@ -37,11 +37,21 @@ class SuratController extends Controller
         }elseif($exportType == 'st'){
 
             $kegiatan = null;
+            $menimbang = null;
             switch ($request->kegiatan) {
                 case 'kie_tomas':
-                    $kegiatan = 'bahwa dalam rangka Pemberdayaan pada Masyarakat Tahun
+                    $kegiatan = 'Komunikasi Informasi dan Edukasi (KIE) Bersama Tokoh Masyarakat';
+                    $menimbang = 'bahwa dalam rangka Pemberdayaan pada Masyarakat Tahun
                                 2024 perlu dilaksanakan kegiatan Komunikasi Informasi dan
                                 Edukasi (KIE) Bersama Tokoh Masyarakat ';
+                    break;
+                case 'bimtek_pasar':
+                     $kegiatan = 'Bimtek dan Penyuluhan Komunitas Pasar';
+                     $menimbang='bahwa dalam bahwa dalam rangka Pengawasan Bahan Berbahaya pada Pangan perlu dilaksanakan kegiatan Bimtek dan Penyuluhan Komunitas Pasar';
+                    break;
+                case 'intens_ramadhan':
+                     $kegiatan = 'KIE Keliling';
+                     $menimbang='bahwa dalam rangka menjamin keamanan dan mutu produk  selama  Bulan ramadhan perlu dilaksanakan kegiatan KIE Keliling ';
                     break;
                 case 'lainnya':
                      $kegiatan = $request->desc_kegiatan;
@@ -70,13 +80,13 @@ class SuratController extends Controller
             }
 
             $petugas = [
-                'nama'=>'MUh. Fuad, ST',
+                'nama'=>'Muh.Fuad, ST',
                 'nip'=>'604142405940002',
                 'jabatan'=>'Tenaga Administrasi Substansi Infokom',
                 'pangkat'=>'-',
             ];
 
-            $pdf = Pdf::loadview('pages.persuratan.surat-tugas.export',['data'=>$data,'kegiatan'=>$kegiatan,'petugas'=>$petugas,'tanggal_berlaku'=>$tanggal_berlaku,'tanggal_surat'=>$tanggal_surat]);
+            $pdf = Pdf::loadview('pages.persuratan.surat-tugas.export',['data'=>$data,'kegiatan'=>$kegiatan,'menimbang'=>$menimbang,'petugas'=>$petugas,'tanggal_berlaku'=>$tanggal_berlaku,'tanggal_surat'=>$tanggal_surat]);
             return $pdf->stream('st.pdf');
         }
     }

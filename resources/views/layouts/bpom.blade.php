@@ -11,7 +11,7 @@
     <meta name="author" content="" />
     @yield('header')
 
-    {{-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"> --}}
+    @stack('style')
     <link
       href="/fontawesome-free/css/all.min.css"
       rel="stylesheet"
@@ -22,10 +22,10 @@
       rel="stylesheet"
     />
 
+    <link rel="stylesheet" href="/public/css/tagify.css">
+
     <!-- Custom styles for this template-->
     <link href="/css/sb-admin-2.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="/css/tagify.css">
-
 
     <title>SISaTu - BPOM Mamuju</title>
 
@@ -603,6 +603,7 @@
     </div>
 
     <!-- Bootstrap core JavaScript-->
+    <script src="/dist/tagify.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
 
@@ -620,6 +621,5 @@
     <script src="{{ mix('js/app.js') }}"></script>
     <script src="{{ asset('vendor/datatables/buttons.server-side.js') }}"></script>
     @stack('scripts')
-    @yield('footer')
   </body>
 </html>

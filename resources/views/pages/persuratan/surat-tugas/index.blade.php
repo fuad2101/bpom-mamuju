@@ -2,6 +2,11 @@
 @section('header')
 @laravelViewsStyles
 @endsection
+
+@push('style')
+<link rel="stylesheet" href="/css/tagify.css">
+@endpush
+
 @section('content')
     <!-- Begin Page Content -->
     {{-- @livewire() --}}
@@ -14,6 +19,9 @@
             </div>
                 <form action="/exp/pdf" method="post" class="">
                     @csrf
+                    <div class="row">
+                        <input name='input-custom-dropdown' class='tagify--custom-dropdown' placeholder='Type an English letter' value=''>
+                    </div>
                     <input type="hidden" name="exportType" value="st">
                     <div class="row mb-3">
                         <div class="col">
@@ -31,7 +39,18 @@
                                 <option value="kie_keliling">KIE Keliling</option>
                                 <option value="lainnya">Lainnya</option>
                             </select>
-                            <input type="text" name="desc_kegiatan" class="form-control-sm mt-2" placeholder="Isi deskripsi kegiatan" required >
+                            <input type="text" name="desc_kegiatan" class="form-control form-control-sm mt-2" placeholder="Isi deskripsi kegiatan" >
+                        </div>
+                        <div class="col mb-3">
+                            <label for="">Lokasi</label>
+                            <select class="form-control" name="kabupaten" id="">
+                                <option value="Mamuju">Mamuju</option>
+                                <option value="Mamuju Tengah">Mamuju Tengah</option>
+                                <option value="Polewali Mandar">Polewali Mandar</option>
+                                <option value="Majene">Majene</option>
+                                <option value="Pasangkayu">Pasangkayu</option>
+                                <option value="Mamasa">Mamasa</option>
+                            </select>
                         </div>
                     </div>
                     <div class="row mb-3">
@@ -61,31 +80,33 @@
 @endsection
 
 
-@section('footer')
-    <script>
-        $(document).ready(function () {
+@push('script')
+<script src="/js/tagify.js"></script>
+<script>
+    $(document).ready(function () {
 
-            const nama=[];
-            $('[name="desc_kegiatan"]').hide();
+        const nama=[];
+        $('[name="desc_kegiatan"]').attr('disabled',true);
 
-            $('[name="kegiatan"]').change(function() {
-                if ($(this).val() === 'lainnya') {
-                    $('[name="desc_kegiatan"]').show(1000);
-                }else{
-                $('[name="desc_kegiatan"]').hide(1000);
-                }
-            })
-
-            // $('input[id="nama"]').tagify({
-            //     placeholder:'Masukkan Nama',
-            //     callback:{
-            //         function () {
-            //             alert('Nama Masuk');
-            //         }
-            //     }
-            // });
+        $('[name="kegiatan"]').change(function() {
+            if ($(this).val() === 'lainnya') {
+                $('[name="desc_kegiatan"]').removeAttr('disabled');
+            }else{
+            // $('[name="desc_kegiatan"]').hide(1000);
+            }
         })
-    </script>
-@endsection
+
+        $('[name="input-custom-dropdown"]').tagify({
+            placeholder:'Masukkan Nama',
+            callback:{
+                function () {
+                    alert('Nama Masuk');
+                }
+            }
+        });
+    })
+</script>
+@endpush
+
 
 
