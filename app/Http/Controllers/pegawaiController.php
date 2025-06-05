@@ -98,4 +98,9 @@ class pegawaiController extends Controller
     {
         //
     }
+
+    public function getPegawai(){
+      $data = Pegawai::all();
+      dump($data);
+    }
 }

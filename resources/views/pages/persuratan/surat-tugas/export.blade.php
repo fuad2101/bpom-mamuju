@@ -223,13 +223,15 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td>1</td>
-            <td>{{$petugas['nama']}}</td>
-            <td>{{$petugas['nip']}}</td>
-            <td>{{$petugas['pangkat']}}</td>
-            <td>{{$petugas['jabatan']}}</td>
-        </tr>
+        @foreach ($petugas as $petugas)
+            <tr>
+                <td style="text-align:center;">{{$loop->iteration}}.</td>
+                <td style="max-width: 200px; overflow:inherit; white-space:normal;">{{$petugas['nama']}}</td>
+                <td style="text-align:center;">{{$petugas['nip']}}</td>
+                <td style="text-align:center;">{{$petugas['pangkat']}}</td>
+                <td style="text-align:center;">{{$petugas['jabatan']}}</td>
+            </tr>
+        @endforeach
     </tbody>
 </table>
 

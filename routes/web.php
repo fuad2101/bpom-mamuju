@@ -34,9 +34,7 @@ Route::get('/dashboard', function () {
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware(['auth', 'verified'])->name('home');
 Route::prefix('surat')->group(function(){
-    Route::get('/st',function(){
-        return view('pages.persuratan.surat-tugas.index');
-    });
+    Route::get('/st',[SuratController::class,'createST'])->name('createST');
     Route::get('/nodin',function(){
         return view('pages.persuratan.nodin.index');
     });
@@ -45,10 +43,15 @@ Route::prefix('surat')->group(function(){
     });
 });
 
+Route::get('/ajax/pegawai', [SuratController::class, 'ajaxPegawai'])->name('pegawai.ajax');
+
 
 Route::get('/pegawai',[pegawaiController::class,'index'])->name('pegawai.index');
 Route::get('/pegawai/create',[pegawaiController::class,'create'])->name('pegawai.create');
 Route::post('/pegawai/create',[pegawaiController::class,'store'])->name('pegawai.store');
+
+// Select2 Route
+Route::get('/getPegawai',[pegawaiController::class,'getPegawai']);
 
 //Route::post('/phpword',[SuratController::class,'create']);
 

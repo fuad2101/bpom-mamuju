@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Pegawai;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
-use PhpOffice\PhpWord\PhpWord as phpword;
 use Barryvdh\DomPDF\Facade\Pdf;
+use PhpOffice\PhpWord\PhpWord as phpword;
 //use Illuminate\Support\Facades\Request;
 //use PhpOffice\PhpWord\IOFactory as iofactory ;
 
@@ -25,9 +26,29 @@ class SuratController extends Controller
 
     }
 
+    public function createST(){
+
+        // $petugas_terpilih = Pegawai::whereIn('id', $selectedPetugasIds)->get();
+        // return view('pages.persuratan.surat-tugas.index', compact('petugas_terpilih'));
+        $pegawai = Pegawai::all();
+        return view('pages.persuratan.surat-tugas.index',['pegawai'=>$pegawai]);
+    }
+
+    public function ajaxPegawai(Request $request){
+        $search = $request->q;
+        $pegawai = Pegawai::where('nama', 'like', '%' . $search . '%')
+            ->select('id', 'nama','pangkat','golongan','jabatan','substansi')
+            ->limit(10)
+            ->get();
+
+        return response()->json($pegawai);
+    }
+
     public function pdf(Request $request){
+
         $exportType = $request->exportType;
         $data = $request->all();
+        $petugas = $request->input('petugas');
 
         if($exportType == 'nodin'){
 
@@ -38,6 +59,7 @@ class SuratController extends Controller
 
             $kegiatan = null;
             $menimbang = null;
+
             switch ($request->kegiatan) {
                 case 'kie_tomas':
                     $kegiatan = 'Komunikasi Informasi dan Edukasi (KIE) Bersama Tokoh Masyarakat';
@@ -51,12 +73,15 @@ class SuratController extends Controller
                     break;
                 case 'intens_ramadhan':
                      $kegiatan = 'KIE Keliling';
-                     $menimbang='bahwa dalam rangka menjamin keamanan dan mutu produk  selama  Bulan ramadhan perlu dilaksanakan kegiatan KIE Keliling ';
+                     $menimbang='bahwa dalam rangka menjamin keamanan dan mutu produk yang beredar dimasyarakat perlu dilaksanakan kegiatan KIE Keliling ';
+                    break;
+                case 'bimtek_komunitas_desa':
+                     $kegiatan = 'Bimtek Komunitas Desa';
+                     $menimbang='bahwa dalam rangka menjamin keamanan dan mutu produk di desa, perlu dilaksanakan kegiatan Bimtek Komunitas Desa ';
                     break;
                 case 'lainnya':
                      $kegiatan = $request->desc_kegiatan;
                     break;
-
                 default:
                     $kegiatan = 'Default kegiatan';
                     break;
@@ -79,14 +104,19 @@ class SuratController extends Controller
                 $tanggal_berlaku = 'pada tanggal '.$isoFormat;
             }
 
-            $petugas = [
-                'nama'=>'Muh.Fuad, ST',
-                'nip'=>'604142405940002',
-                'jabatan'=>'Tenaga Administrasi Substansi Infokom',
-                'pangkat'=>'-',
-            ];
+            $ids = $request->input('petugas');
+            $petugases = Pegawai::whereIn('id', $ids)->get();
 
-            $pdf = Pdf::loadview('pages.persuratan.surat-tugas.export',['data'=>$data,'kegiatan'=>$kegiatan,'menimbang'=>$menimbang,'petugas'=>$petugas,'tanggal_berlaku'=>$tanggal_berlaku,'tanggal_surat'=>$tanggal_surat]);
+            $pdf = Pdf::loadview('pages.persuratan.surat-tugas.export',
+            [
+                'data'=>$data,
+                'kegiatan'=>$kegiatan,
+                'menimbang'=>$menimbang,
+                'petugas'=>$petugases,
+                'tanggal_berlaku'=>$tanggal_berlaku,
+                'tanggal_surat'=>$tanggal_surat
+            ]);
+
             return $pdf->stream('st.pdf');
         }
     }

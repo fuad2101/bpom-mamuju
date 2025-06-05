@@ -3,44 +3,23 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <meta name="description" content="" />
     <meta name="author" content="" />
     @yield('header')
 
-    @stack('style')
-    <link
-      href="/fontawesome-free/css/all.min.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-      rel="stylesheet"
-    />
-
-    <link rel="stylesheet" href="/public/css/tagify.css">
-
-    <!-- Custom styles for this template-->
     <link href="/css/sb-admin-2.min.css" rel="stylesheet" />
+    <link href="/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet"/>
 
+    @stack('style')
     <title>SISaTu - BPOM Mamuju</title>
-
-    <!-- Custom fonts for this template-->
-
   </head>
 
     <body id="page-top">
     <!-- Page Wrapper -->
     <div id="wrapper">
-      <!-- Sidebar -->
-      <ul
-        class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion"
-        id="accordionSidebar"
-      >
+      <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
         <!-- Sidebar - Brand -->
         <a
           class="sidebar-brand d-flex align-items-center justify-content-center"
@@ -177,13 +156,13 @@
         </li> --}}
 
         <!-- Divider -->
-        <hr class="sidebar-divider" />
+        {{-- <hr class="sidebar-divider" /> --}}
 
         <!-- Heading -->
-        <div class="sidebar-heading">Addons</div>
+        {{-- <div class="sidebar-heading">Addons</div> --}}
 
         <!-- Nav Item - Pages Collapse Menu -->
-        <li class="nav-item">
+        {{-- <li class="nav-item">
           <a
             class="nav-link collapsed"
             href="#"
@@ -205,12 +184,9 @@
               <h6 class="collapse-header">DUMMY</h6>
               <a class="collapse-item" href="#">Others</a>
               <div class="collapse-divider"></div>
-              {{-- <h6 class="collapse-header">Other Pages:</h6>
-              <a class="collapse-item" href="404.html">404 Page</a>
-              <a class="collapse-item" href="blank.html">Blank Page</a> --}}
             </div>
           </div>
-        </li>
+        </li> --}}
 
         <!-- Nav Item - Charts -->
         {{-- <li class="nav-item">
@@ -236,23 +212,6 @@
           <button class="rounded-circle border-0" id="sidebarToggle"></button>
         </div>
 
-        <!-- Sidebar Message -->
-        {{-- <div class="sidebar-card d-none d-lg-flex"> --}}
-          {{-- <img
-            class="sidebar-card-illustration mb-2"
-            src="/img/undraw_rocket.svg"
-            alt="..."
-          />
-          <p class="text-center mb-2">
-            <strong>SB Admin Pro</strong> is packed with premium features,
-            components, and more!
-          </p>
-          <a
-            class="btn btn-success btn-sm"
-            href="https://startbootstrap.com/theme/sb-admin-pro"
-            >Upgrade to Pro!</a
-          > --}}
-        {{-- </div> --}}
       </ul>
       <!-- End of Sidebar -->
 
@@ -603,23 +562,12 @@
     </div>
 
     <!-- Bootstrap core JavaScript-->
-    <script src="/dist/tagify.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Core plugin JavaScript-->
-    {{-- <script src="/jquery-easing/jquery.easing.min.js"></script> --}}
-
-    <!-- Custom scripts for all pages-->
-    {{-- <script src="/js/sb-admin-2.min.js"></script> --}}
-
-    <!-- Page level plugins -->
-    {{-- <script src="/vendor/chart.js/Chart.min.js"></script> --}}
-
-    <!-- Page level custom scripts -->
     <script src="https://cdn.datatables.net/2.0.0/js/dataTables.min.js"></script>
     <script src="{{ mix('js/app.js') }}"></script>
     <script src="{{ asset('vendor/datatables/buttons.server-side.js') }}"></script>
-    @stack('scripts')
+    @stack('script')
+
   </body>
 </html>
