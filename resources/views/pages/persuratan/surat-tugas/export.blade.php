@@ -227,9 +227,9 @@
             <tr>
                 <td style="text-align:center;">{{$loop->iteration}}.</td>
                 <td style="max-width: 200px; overflow:inherit; white-space:normal;">{{$petugas['nama']}}</td>
-                <td style="text-align:center;">{{$petugas['nip']}}</td>
-                <td style="text-align:center;">{{$petugas['pangkat']}}</td>
-                <td style="text-align:center;">{{$petugas['jabatan']}}</td>
+                <td style="text-align:center; width:200px;">{{$petugas['nip']}}</td>
+                <td style="text-align:center;max-width:70px;">{{$petugas['pangkat']}}</td>
+                <td style="text-align:center;max-width:50px;">{{$petugas['jabatan']}}</td>
             </tr>
         @endforeach
     </tbody>
