@@ -7,7 +7,7 @@
 
 @section('content')
 
-<div class="container-fluid">
+<div class="container-fluid px-sm-5">
     <!-- Page Heading -->
     <div
       class="d-sm-flex align-items-center justify-content-between mb-4"
@@ -18,25 +18,12 @@
             @csrf
             <input type="hidden" name="exportType" value="st">
             <div class="row mb-3">
-                <div class="col">
+                <div class="col-md-6">
                     <label for="no_surat" class="form-label">Nomor Surat</label>
-                    <input type="text" name="nomor" id="no_surat" class="form-control" >
+                    <input type="text" class="form-control" name="nomor" id="no_surat" >
                 </div>
-            </div>
-            <div class="row">
-                <div class="col mb-3">
-                    <label for="desc_kegiatan" class="form-label">Kegiatan</label>
-                    <select class="form-control" name="kegiatan" id="" >
-                        <option value="bimtek_pasar">Bimtek Pasar</option>
-                        <option value="kie_tomas">KIE Tomas</option>
-                        <option value="bimtek_komunitas_desa">Bimtek Komunitas Desa</option>
-                        <option value="kie_keliling">KIE Keliling</option>
-                        <option value="lainnya">Lainnya</option>
-                    </select>
-                    <input type="text" name="desc_kegiatan" class="form-control form-control-sm mt-2" placeholder="Isi deskripsi kegiatan" disabled>
-                </div>
-                <div class="col mb-3">
-                    <label for="">Lokasi</label>
+                <div class="col-md-6 mb-3">
+                    <label for="">Lokasi Kegiatan</label>
                     <select class="form-control" name="kabupaten" id="">
                         <option value="Mamuju">Mamuju</option>
                         <option value="Mamuju Tengah">Mamuju Tengah</option>
@@ -57,10 +44,22 @@
                     <input class="form-control ml-2" type="date" name="tanggal_akhir" id="" class="form-control" >
                 </div>
             </div>
-            {{-- <div class="col mb-3">
-                <label for="menimbang" class="form-label">Menimbang Poin A</label>
-                <textarea class="form-control" name="menimbang" id="" cols="30" rows="10"></textarea>
-            </div> --}}
+            <div class="row">
+                <div class="col mb-3">
+                    <label for="desc_kegiatan" class="form-label">Kegiatan</label>
+                    <select class="form-control" name="kegiatan" id="" >
+                        <option value="bimtek_pasar">Bimtek Pasar</option>
+                        <option value="kie_tomas">KIE Tomas</option>
+                        <option value="bimtek_komunitas_desa">Bimtek Komunitas Desa</option>
+                        <option value="kie_keliling">KIE Keliling</option>
+                        <option value="lainnya">Lainnya</option>
+                    </select>
+                    <input type="text" name="desc_kegiatan" class="form-control form-control-sm mt-2" placeholder="Nama Kegiatan">
+                </div>
+            </div>
+            <div class="col mb-3">
+                <textarea class="form-control" name="menimbang" id="" cols="30" rows="10" placeholder="bahwa dalam rangka..."></textarea>
+            </div>
             <div class="row mb-3">
                 <label for="contoh" class="form-label">Nama Petugas</label>
                 <select class="form-control mb-3" name="petugas[]" id="contoh" multiple="multiple">
@@ -70,7 +69,11 @@
                 </select>
             </div>
 
-            <button type="submit" class="btn btn-primary mb-5">Cetak Surat</button>
+            <div class="row">
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary btn-lg mb-5">Cetak Surat</button>
+                </div>
+            </div>
         </form>
   </div>
 
@@ -134,9 +137,13 @@
 
             $('[name="kegiatan"]').change(function() {
                 if ($(this).val() != 'lainnya') {
-                    $('[name="desc_kegiatan"]').attr('disabled',true);
+                    $('[name="desc_kegiatan"]').hide();
+                    $('[name="menimbang"]').hide();
+                    // $('[name="desc_kegiatan"]').attr('disabled',true);
                 }else{
-                    $('[name="desc_kegiatan"]').removeAttr('disabled');
+                    $('[name="desc_kegiatan"]').show(500);
+                    $('[name="menimbang"]').show(500);
+                    // $('[name="desc_kegiatan"]').removeAttr('disabled');
                 }
             })
         });

@@ -59,28 +59,33 @@ class SuratController extends Controller
 
             $kegiatan = null;
             $menimbang = null;
+            $tahun = date('Y');
 
             switch ($request->kegiatan) {
+
                 case 'kie_tomas':
                     $kegiatan = 'Komunikasi Informasi dan Edukasi (KIE) Bersama Tokoh Masyarakat';
-                    $menimbang = 'bahwa dalam rangka Pemberdayaan pada Masyarakat Tahun
-                                2024 perlu dilaksanakan kegiatan Komunikasi Informasi dan
-                                Edukasi (KIE) Bersama Tokoh Masyarakat ';
+                    $menimbang = 'bahwa dalam rangka Pemberdayaan pada Masyarakat Tahun '.$tahun.' perlu dilaksanakan kegiatan Komunikasi Informasi dan Edukasi (KIE) Bersama Tokoh Masyarakat ';
                     break;
                 case 'bimtek_pasar':
                      $kegiatan = 'Bimtek dan Penyuluhan Komunitas Pasar';
-                     $menimbang='bahwa dalam bahwa dalam rangka Pengawasan Bahan Berbahaya pada Pangan perlu dilaksanakan kegiatan Bimtek dan Penyuluhan Komunitas Pasar';
+                     $menimbang='bahwa dalam bahwa dalam rangka Pengawasan Bahan Berbahaya pada Pangan Tahun '.$tahun.' perlu dilaksanakan kegiatan Bimtek dan Penyuluhan Komunitas Pasar';
                     break;
                 case 'intens_ramadhan':
                      $kegiatan = 'KIE Keliling';
-                     $menimbang='bahwa dalam rangka menjamin keamanan dan mutu produk yang beredar dimasyarakat perlu dilaksanakan kegiatan KIE Keliling ';
+                     $menimbang='bahwa dalam rangka menjamin keamanan dan mutu produk yang beredar dimasyarakat Tahun '.$tahun.' perlu dilaksanakan kegiatan KIE Keliling ';
                     break;
                 case 'bimtek_komunitas_desa':
                      $kegiatan = 'Bimtek Komunitas Desa';
-                     $menimbang='bahwa dalam rangka menjamin keamanan dan mutu produk di desa, perlu dilaksanakan kegiatan Bimtek Komunitas Desa ';
+                     $menimbang='bahwa dalam rangka menjamin keamanan dan mutu produk di desa Tahun '.$tahun.' , perlu dilaksanakan kegiatan Bimtek Komunitas Desa ';
+                    break;
+                case 'kie_keliling':
+                     $kegiatan = 'KIE Keliling';
+                     $menimbang='bahwa dalam rangka menjamin keamanan dan mutu produk obat dan makanan yang beredar dimasyarakat Tahun '.$tahun.' , perlu dilaksanakan Komunikasi Informasi dan Edukasi Keliling';
                     break;
                 case 'lainnya':
                      $kegiatan = $request->desc_kegiatan;
+                     $menimbang= $request->menimbang;
                     break;
                 default:
                     $kegiatan = 'Default kegiatan';

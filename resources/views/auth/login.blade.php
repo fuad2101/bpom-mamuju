@@ -31,7 +31,7 @@
                 );
             }
         </style>
-        <title>Login Page | Sisatu</title>
+        <title>Login Page | POMALET</title>
     </head>
     <body>
         <section class=" gradient-custom">
@@ -47,9 +47,10 @@
                             <div class="card-body p-5 text-center">
                                 <div class="mt-md-4 pb-5">
                                     <img src="/img/logo-contour@3x.png" alt="" style="max-height:150px">
-                                    <h2 class="fw-bold mb-2 text-uppercase">
-                                        Aplikasi SiSatu <br>BPOM Mamuju
+                                    <h2 class="fw-bold mb-2">
+                                        POMALET
                                     </h2>
+                                    <h3>BPOM Mamuju Letter System</h3>
                                     <p class="text-white-50 mb-5">
                                         Silahkan login untuk melanjutkan!
                                         @error('email')

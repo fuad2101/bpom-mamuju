@@ -31,7 +31,7 @@
                 );
             }
         </style>
-        <title>SISatu | BPOM Mamuju</title>
+        <title>POMALET | BPOM Mamuju</title>
     </head>
     <body>
         <section class=" gradient-custom">
@@ -48,7 +48,7 @@
                                 <div class="mt-md-4 pb-5">
                                     <img src="/img/logo-contour@3x.png" alt="" style="max-height:150px">
                                     <h2 class="fw-bold mb-2 text-uppercase">
-                                        Aplikasi SiSatu <br>BPOM Mamuju
+                                        BPOM Mamuju <br>Letter System
                                     </h2>
                                     <p class="text-white-50 mb-5">
                                         Silahkan login untuk melanjutkan!

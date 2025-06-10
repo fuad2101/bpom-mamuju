@@ -100,7 +100,7 @@
             <div class="bg-white py-2 collapse-inner rounded">
               <h6 class="collapse-header">Buat Surat</h6>
               <a class="collapse-item" href="{{url('/surat/st')}}">Surat Tugas</a>
-              <a class="collapse-item" href=" {{url('/surat/nodin')}} ">Nota Dinas</a>
+              {{-- <a class="collapse-item" href=" {{url('/surat/nodin')}} ">Nota Dinas</a> --}}
             </div>
           </div>
         </li>
@@ -111,12 +111,17 @@
             class="nav-link collapsed"
             href="#"
             data-toggle="collapse"
-            data-target="#collapseUtilities"
+            {{-- data-target="#collapseUtilities" --}}
             aria-expanded="true"
             aria-controls="collapseUtilities"
           >
             <i class="fas fa-fw fa-wrench"></i>
-            <span>KEARSIPAN</span>
+            <span>KEARSIPAN
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    Soon
+                </span>
+            </span>
+
           </a>
           <div
             id="collapseUtilities"
@@ -278,13 +283,13 @@
                   href="#"
                   id="alertsDropdown"
                   role="button"
-                  data-toggle="dropdown"
+                  {{-- data-toggle="dropdown" --}}
                   aria-haspopup="true"
                   aria-expanded="false"
                 >
                   <i class="fas fa-bell fa-fw"></i>
                   <!-- Counter - Alerts -->
-                  <span class="badge badge-danger badge-counter">3+</span>
+                  {{-- <span class="badge badge-danger badge-counter">3+</span> --}}
                 </a>
                 <!-- Dropdown - Alerts -->
                 <div
@@ -343,13 +348,13 @@
                   href="#"
                   id="messagesDropdown"
                   role="button"
-                  data-toggle="dropdown"
+                  {{-- data-toggle="dropdown" --}}
                   aria-haspopup="true"
                   aria-expanded="false"
                 >
                   <i class="fas fa-envelope fa-fw"></i>
                   <!-- Counter - Messages -->
-                  <span class="badge badge-danger badge-counter">7</span>
+                  {{-- <span class="badge badge-danger badge-counter">7</span> --}}
                 </a>
                 <!-- Dropdown - Messages -->
                 <div
@@ -462,7 +467,7 @@
                   class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                   aria-labelledby="userDropdown"
                 >
-                  <a class="dropdown-item" href="#">
+                  {{-- <a class="dropdown-item" href="#">
                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                     Profile
                   </a>
@@ -473,8 +478,8 @@
                   <a class="dropdown-item" href="#">
                     <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
                     Activity Log
-                  </a>
-                  <div class="dropdown-divider"></div>
+                  </a> --}}
+                  {{-- <div class="dropdown-divider"></div> --}}
                   <a
                     class="dropdown-item"
                     href="#"
@@ -565,7 +570,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.datatables.net/2.0.0/js/dataTables.min.js"></script>
-    <script src="{{ mix('js/app.js') }}"></script>
+    {{-- <script src="{{ mix('js/app.js') }}"></script> --}}
     <script src="{{ asset('vendor/datatables/buttons.server-side.js') }}"></script>
     @stack('script')
 
