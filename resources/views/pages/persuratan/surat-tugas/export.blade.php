@@ -46,20 +46,27 @@
                 margin-top: 0;
             }
             .dasar li{
-                line-height:1.5em;
+                line-height:1.15;
                 text-align: justify;
             }
             .dasar li:first-child{
-                margin-top: -5;
+                /* margin-top: -5; */
                 /* padding-top: 0!; */
             }
             .ttd,.lampiran{
                 margin-top: 25px;
                 margin-left: 50%;
+
+            }
+            .lampiran{
+                font-size: 10pt;
+                line-height: 1;
             }
             .container{
-                margin: 0px;
-                padding: 0px 30px;
+                margin-left:2cm;
+                margin-right:1cm;
+                margin-bottom:1.5cm;
+                padding:0;
             }
             footer{
                 position: absolute;
@@ -117,10 +124,11 @@
         <img id="kop" src="{{public_path('/images/header.jpg')}}" alt="kop">
 </header>
 
+<br>
 <p style="text-align: center">SURAT TUGAS <br> NOMOR : {{$data['nomor']}}</p>
 
 <div>
-    <div class="container" style="padding-left:50px;padding-right:50px;">
+    <div class="container" style="">
         <table class="dasar" cellpadding="0">
             <tbody class="">
                 <tr>
@@ -176,7 +184,7 @@
         <div class="ttd">
             <p>Mamuju, {{$tanggal_surat}}<br>Kepala Balai POM Di Mamuju </p>
             <p style="padding-left: 25px;margin-top:50px;margin-bottom:50px;">${ttd_pengirim}</p>
-            <p>BURHAM SIDOBEJO, SH.,MH</p>
+            <p>Burham Sidobejo, SH.,MH</p>
 
         </div>
 
@@ -231,9 +239,9 @@
             <tr>
                 <td style="text-align:center;">{{$loop->iteration}}.</td>
                 <td style="max-width: 200px; overflow:inherit; white-space:normal;">{{$petugas['nama']}}</td>
-                <td style="text-align:center; width:200px;">{{$petugas['nip']}}</td>
-                <td style="text-align:center;max-width:70px;">{{$petugas['pangkat']}}</td>
-                <td style="text-align:center;max-width:50px;">{{$petugas['jabatan']}}</td>
+                <td style="text-align:center;">{{$petugas['nip']}}</td>
+                <td style="text-align:center;">{{$petugas['pangkat']}}</td>
+                <td style="text-align:center;padding:5px;">{{$petugas['jabatan']}}</td>
             </tr>
         @endforeach
     </tbody>
@@ -242,7 +250,7 @@
 <div class="ttd">
     <p>Mamuju, {{$tanggal_surat}} <br> Kepala Balai POM Di Mamuju </p>
     <p style="padding-left: 25px;margin-top:50px;margin-bottom:50px;">${ttd_pengirim}</p>
-    <p>BURHAM SIDOBEJO, SH.,MH</p>
+    <p>Burham Sidobejo, SH.,MH</p>
 </div>
 
 <body>
