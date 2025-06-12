@@ -120,7 +120,7 @@ class SuratController extends Controller
                 'petugas'=>$petugases,
                 'tanggal_berlaku'=>$tanggal_berlaku,
                 'tanggal_surat'=>$tanggal_surat
-            ]);
+            ])->setPaper([0,0,609.45,935.43]);
 
             return $pdf->stream('st.pdf');
         }

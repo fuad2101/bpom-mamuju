@@ -37,12 +37,12 @@
             </form> --}}
 
             <!-- Content Row -->
-            {{$dataTable->table()}}
+            {{-- {{$dataTable->table()}} --}}
             <div class="row">
 
 
-                {{-- <div class="col">
-                    <table class="table table-striped table-inverse table-bordered">
+                <div class="col">
+                    <table class="table table-responsive table-hover">
                         <thead class="thead-inverse">
                             <tr>
                                 <th scope="col">No</th>
@@ -66,7 +66,7 @@
                             @endforeach
                             </tbody>
                     </table>
-                </div> --}}
+                </div>
 
 
               <!-- Earnings (Monthly) Card Example -->
@@ -502,7 +502,7 @@
 @endsection
 
 @push('scripts')
-     {{$dataTable->scripts()}}
+     {{-- {{$dataTable->scripts()}} --}}
 @endpush
 
 

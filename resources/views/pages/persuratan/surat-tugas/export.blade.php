@@ -46,8 +46,12 @@
                 margin-top: 0;
             }
             .dasar li{
-                /* line-height:20pt; */
+                line-height:1.5em;
                 text-align: justify;
+            }
+            .dasar li:first-child{
+                margin-top: -5;
+                /* padding-top: 0!; */
             }
             .ttd,.lampiran{
                 margin-top: 25px;
@@ -59,7 +63,7 @@
             }
             footer{
                 position: absolute;
-                bottom: -75px;
+                bottom: -115px;
                 height: 30%;
                 width: 115%;
                 margin: 0 -45px;
@@ -99,7 +103,7 @@
                 /* bottom: 2px; */
                 text-align: center;
                 border: 1px solid black;
-                padding: 5px 55px 5px 55px;
+                padding: 5px 45px 5px 45px;
             }
             .page-break {
                 page-break-after: always;

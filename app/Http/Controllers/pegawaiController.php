@@ -15,12 +15,10 @@ class pegawaiController extends Controller
      */
     public function index(PegawaisDataTable $datatable)
     {
-
-
-        return $datatable->render('pages.pegawai.index');
+        // return $datatable->render('pages.pegawai.index');
         //$data = $datatable->render();
-        //$data = Pegawai::all();
-        //return view('')->with('data',$data);
+        $data = Pegawai::all();
+        return view('pages.pegawai.index')->with('data',$data);
     }
 
     /**

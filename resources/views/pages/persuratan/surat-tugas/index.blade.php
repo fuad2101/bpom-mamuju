@@ -49,9 +49,9 @@
                     <label for="desc_kegiatan" class="form-label">Kegiatan</label>
                     <select class="form-control" name="kegiatan" id="" >
                         <option value="bimtek_pasar">Bimtek Pasar</option>
-                        <option value="kie_tomas">KIE Tomas</option>
                         <option value="bimtek_komunitas_desa">Bimtek Komunitas Desa</option>
                         <option value="kie_keliling">KIE Keliling</option>
+                        <option value="kie_tomas">KIE Tomas</option>
                         <option value="lainnya">Lainnya</option>
                     </select>
                     <input type="text" name="desc_kegiatan" class="form-control form-control-sm mt-2" placeholder="Nama Kegiatan">

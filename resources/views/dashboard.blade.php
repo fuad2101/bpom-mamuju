@@ -7,19 +7,43 @@
             <div
               class="d-sm-flex align-items-center justify-content-between mb-4"
             >
-              <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-              <a
+              {{-- <h1 class="h3 mb-0 text-gray-800">Dashbaord</h1> --}}
+              {{-- <a
                 href="#"
                 class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"
                 ><i class="fas fa-download fa-sm text-white-50"></i> Generate
-                Report</a
-              >
+                Report</a> --}}
             </div>
 
             <!-- Content Row -->
             <div class="row">
-              <!-- Earnings (Monthly) Card Example -->
-              <div class="col-md-6 mb-4">
+                <div class="row justify-content-center">
+                    <div class="col d-none d-md-inline">
+                        <img class="img img-fluid" src="{{asset('/images/dashboard_img.svg')}}" alt="">
+                    </div>
+                    <div class="col-12 d-md-none mb-5">
+                        <img class="img img-fluid" src="{{asset('/images/dashboard_img.svg')}}" alt="">
+                    </div>
+                    <div class="col">
+                        <h1 class="display-1 d-none d-md-block lh-1 mb-4">Selamat Datang di <b>POMALET</b> </h1>
+
+                        <div>
+                            <p class="fs-5 lh-sm text-start "><b class="fw-bolder">POMALET</b> (BPOM Mamuju Letter System) adalah sistem surat-menyurat internal yang dikembangkan  untuk mendukung efisiensi administrasi dan ketertiban dokumen kedinasan. Melalui aplikasi ini, pengguna dapat:
+                            </p>
+
+                            <ul class="">
+                                <li>Membuat Surat Tugas dan Nota Dinas secara digital</li>
+                                <li>Menyesuaikan format dokumen sesuai Tata Naskah Dinas</li>
+                                <li>Menyimpan dan mengarsipkan dokumen secara elektronik (coming soon)</li>
+                                <li>Memantau proses disposisi dan pengesahan dengan lebih mudah (coming soon)</li>
+                            </ul>
+                        </div>
+                        <p class="d-none d-md-block">POMALET membantu mempercepat alur kerja, meminimalkan kesalahan format, dan mendukung penerapan administrasi berbasis digital di lingkungan Balai POM Mamuju.</p>
+                    </div>
+
+
+                </div>
+              {{-- <div class="col-md-6 mb-4">
                 <div class="card border-left-primary shadow h-100 py-2">
                   <div class="card-body">
                     <div class="row no-gutters align-items-center">
@@ -39,10 +63,9 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> --}}
 
-              <!-- Earnings (Monthly) Card Example -->
-              <div class="col-md-6 mb-4">
+              {{-- <div class="col-md-6 mb-4">
                 <div class="card border-left-success shadow h-100 py-2">
                   <div class="card-body">
                     <div class="row no-gutters align-items-center">
@@ -62,7 +85,7 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> --}}
 
               <!-- Earnings (Monthly) Card Example -->
               {{-- <div class="col-xl-3 col-md-6 mb-4">
@@ -244,8 +267,7 @@
             <div class="row">
               <!-- Content Column -->
               <div class="col-lg-6 mb-4">
-                <!-- Project Card Example -->
-                <div class="card shadow mb-4">
+                {{-- <div class="card shadow mb-4">
                   <div class="card-header py-3">
                     <h6 class="m-0 font-weight-bold text-primary">Projects</h6>
                   </div>
@@ -316,10 +338,10 @@
                       ></div>
                     </div>
                   </div>
-                </div>
+                </div> --}}
 
                 <!-- Color System -->
-                <div class="row">
+                {{-- <div class="row">
                   <div class="col-lg-6 mb-4">
                     <div class="card bg-primary text-white shadow">
                       <div class="card-body">
@@ -384,12 +406,12 @@
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> --}}
               </div>
 
               <div class="col-lg-6 mb-4">
                 <!-- Illustrations -->
-                <div class="card shadow mb-4">
+                {{-- <div class="card shadow mb-4">
                   <div class="card-header py-3">
                     <h6 class="m-0 font-weight-bold text-primary">
                       Illustrations
@@ -419,10 +441,10 @@
                       >Browse Illustrations on unDraw &rarr;</a
                     >
                   </div>
-                </div>
+                </div> --}}
 
                 <!-- Approach -->
-                <div class="card shadow mb-4">
+                {{-- <div class="card shadow mb-4">
                   <div class="card-header py-3">
                     <h6 class="m-0 font-weight-bold text-primary">
                       Development Approach
@@ -441,7 +463,7 @@
                       classes.
                     </p>
                   </div>
-                </div>
+                </div> --}}
               </div>
             </div>
           </div>
