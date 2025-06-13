@@ -59,7 +59,7 @@
 
             }
             .lampiran{
-                font-size: 10pt;
+                font-size: 10;
                 line-height: 1;
             }
             .container{
@@ -204,18 +204,18 @@
 <div class="lampiran">
     <table>
         <tr>
-            <td style="font-family:'Bookman Old Style_bold';">Lampiran</td>
+            <td style="font-family:'Bookman Old Style_bold';">LAMPIRAN</td>
         </tr>
         <tr>
-            <td>Surat Tugas</td>
+            <td>SURAT TUGAS</td>
         </tr>
         <tr>
-            <td>Nomor</td>
+            <td>NOMOR</td>
             <td>:</td>
             <td>{{$data['nomor']}}</td>
         </tr>
         <tr>
-            <td>Tanggal</td>
+            <td>TANGGAL</td>
             <td>:</td>
             <td>{{$tanggal_surat}}</td>
         </tr>
@@ -238,10 +238,10 @@
         @foreach ($petugas as $petugas)
             <tr>
                 <td style="text-align:center;">{{$loop->iteration}}.</td>
-                <td style="max-width: 200px; overflow:inherit; white-space:normal;">{{$petugas['nama']}}</td>
+                <td style="max-width:150px;overflow:inherit; white-space:normal;">{{$petugas['nama']}}</td>
                 <td style="text-align:center;">{{$petugas['nip']}}</td>
-                <td style="text-align:center;">{{$petugas['pangkat']}}</td>
-                <td style="text-align:center;padding:5px;">{{$petugas['jabatan']}}</td>
+                <td style="text-align:center;width:50px">{{$petugas['pangkat']}}</td>
+                <td style="text-align:center;max-width:50px;padding:5px;">{{$petugas['jabatan']}}</td>
             </tr>
         @endforeach
     </tbody>
